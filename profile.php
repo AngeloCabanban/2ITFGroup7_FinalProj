@@ -50,16 +50,12 @@ $stmt->close();
 				<p>Your account details are below:</p>
 				<table>
 					<tr>
-						<td>Username:</td>
+						<td>Email:</td>
 						<td><?=$_SESSION['name']?></td>
 					</tr>
 					<tr>
 						<td>Password:</td>
 						<td><?=$password?></td>
-					</tr>
-					<tr>
-						<td>Email:</td>
-						<td><?=$email?></td>
 					</tr>
 				</table>
 			</div>
