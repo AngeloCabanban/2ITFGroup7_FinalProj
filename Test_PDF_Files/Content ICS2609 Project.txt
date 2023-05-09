@@ -1,0 +1,81 @@
+Content
+
+Tabs:
+I. Login Page
+- Follow Instructions
+( https://docs.google.com/document/d/1K_UCQmMWDQEsIKCkDAVK1Zx_rqe97zWkLaeN3qt480Q/edit )
+- Required Credentials: (ID, Name, Email Address)
+
+*Create corresponding Login Database (Document steps of Database Creation, including Structure, etc.)
+
+II. Home Page:
+( https://www.sei.dost.gov.ph/index.php/programs-and-projects/scholarships/undergraduate-scholarships#s-t-undergraduate-scholarships )
+- Preview of News (Carousel, at least 3-5 featured articles)
+- Welcome Text (Use Information from Login Database)
+- Brief Info about S&T Undergraduate Scholarships
+(See text under S&T Undergraduate Scholarships)
+- Two Types of Scholarship including a Short Description for each type (See text under Types of Scholarship)
+
+
+III. Scholarships Page:
+( https://www.sei.dost.gov.ph/index.php/programs-and-projects/scholarships/undergraduate-scholarships#s-t-undergraduate-scholarships )
+Sub Tabs:
+1. Priority S&T Programs and Study Placements
+2. Scholarship Privileges
+3. Qualifications
+4. Application Requirements
+5. Application Period
+
+IV. Requirements Page:
+- Forms
+- Requires Database Connection*
+- CRUD Integration
+
+*Create corresponding Database (Document steps of Database Creation, including Structure, etc.)
+
+V. News Page:
+(Per News Article; at least 8 - 10 articles, news, programs, or events)
+- Feature Image
+- Short Headline
+- Brief Additional Info
+- Button to redirect to Source Page
+
+*News Articles to follow.
+
+VI. About Page:
+Sub Tabs:
+1. About DOST-SEI
+- Mandate, Vision, and Mission
+( https://www.sei.dost.gov.ph/index.php/about-dost-sei/mandate-vision-and-mission )
+- Data Privacy
+( https://www.sei.dost.gov.ph/index.php/about-dost-sei/data-privacy-notice )
+2. About the Developers
+- Photo of each Member
+- Brief Information (Name, School, etc.)
+- Quote
+
+FAQs Page:
+- FAQs about Undergraduate Scholarships
+( https://www.sei.dost.gov.ph/images/stsd/ugradFAQ.pdf )
+- How to open a Landbank Account
+( https://www.sei.dost.gov.ph/images/others/lbpopen.jpg )
+
+*Get the necessary information from the files.
+
+Contact Us:
+- Email API Integration (to follow)
+- Contact Details
+> Email Addresses
+> Social Media Links
+> Phone Numbers
+
+Social Media Pages
++ Official DOST-SEI Website
+- https://sei.dost.gov.ph/
++ Facebook Page
+- https://www.facebook.com/DOST.SEI/
++ Facebook Group
+- https://www.facebook.com/people/DOST-Scholarship/100063939799753/
+
+*Check For Further Inquiries & Contact Us Page.
+*Social Media Pages to follow.
