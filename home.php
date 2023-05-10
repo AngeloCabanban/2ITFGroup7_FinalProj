@@ -41,19 +41,19 @@ if (!isset($_SESSION['loggedin'])) {
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			</div>
 				<div class="carousel-item active">
-				<a href="news1.php"><img src="images/carousel1.jpg" class="d-block w-100" alt="image1"></a>
+				<a href="https://sei.dost.gov.ph/index.php/news-archive/423-philippines-oldest-regional-science-centrum-just-got-revamped-dost-sei-nulab-bus-joins-the-fun"><img src="images/carousel1.jpg" class="d-block w-100" alt="image1"></a>
 					<div class="carousel-caption d-none d-md-block">
 						<h1>Philippines’ oldest regional science centrum just got revamped, DOST-SEI NuLab bus joins the fun</h1>
 					</div>
 				</div>
 				<div class="carousel-item">
-				<a href="news2.php"><img src="images/carousel2.png" class="d-block w-100" alt="image2"></a>
+				<a href="https://sei.dost.gov.ph/index.php/news-archive/424-films-on-nationalism-community-development-highlighted-in-dost-sei-s-video-making-competition"><img src="images/carousel2.png" class="d-block w-100" alt="image2"></a>
 				<div class="carousel-caption d-none d-md-block">
 						<h1>Films on nationalism, community development highlighted in DOST-SEI's video-making competition</h1>
 					</div>
 				</div>
 				<div class="carousel-item">
-				<a href="news3.php"><img src="images/carousel3.png" class="d-block w-100" alt="image3"></a>
+				<a href="https://sei.dost.gov.ph/index.php/news-archive/425-stem-teach-learning-the-basics-of-geogebra-as-a-tool-in-teaching-mathematics"><img src="images/carousel3.png" class="d-block w-100" alt="image3"></a>
 				<div class="carousel-caption d-none d-md-block">
 						<h1>STEM Teach: Learning the Basics of GeoGebra as a Tool in Teaching Mathematics</h1>
 					</div>

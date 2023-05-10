@@ -49,12 +49,12 @@ if (!isset($_SESSION['loggedin'])) {
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
-		  <a href="news1.php"><img src="images/album1.jpg" class="w-100" alt="image1"></a>
+		  <a href="https://sei.dost.gov.ph/index.php/news-archive/423-philippines-oldest-regional-science-centrum-just-got-revamped-dost-sei-nulab-bus-joins-the-fun"><img src="images/album1.jpg" class="w-100" alt="image1"></a>
             <div class="card-body">
               <p class="card-text">Philippines’ oldest regional science centrum just got revamped, DOST-SEI NuLab bus joins the fun</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-				<a href="news1.php">
+				<a href="https://sei.dost.gov.ph/index.php/news-archive/423-philippines-oldest-regional-science-centrum-just-got-revamped-dost-sei-nulab-bus-joins-the-fun">
                   <button type="button" class="btn btn-sm btn-outline-secondary">Read more</button>
 				</a>
                 </div>
@@ -65,12 +65,12 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
         <div class="col">
           <div class="card shadow-sm">
-		  <a href="news2.php"><img src="images/album2.png" class="w-100" alt="image2"></a>
+		  <a href="https://sei.dost.gov.ph/index.php/news-archive/424-films-on-nationalism-community-development-highlighted-in-dost-sei-s-video-making-competition"><img src="images/album2.png" class="w-100" alt="image2"></a>
             <div class="card-body">
               <p class="card-text">Films on nationalism, community development highlighted in DOST-SEI's video-making competition</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-				<a href="news2.php">
+				<a href="https://sei.dost.gov.ph/index.php/news-archive/424-films-on-nationalism-community-development-highlighted-in-dost-sei-s-video-making-competition">
                   <button type="button" class="btn btn-sm btn-outline-secondary">Read more</button>
 				</a>
                 </div>
@@ -81,12 +81,12 @@ if (!isset($_SESSION['loggedin'])) {
         </div>
         <div class="col">
           <div class="card shadow-sm">
-		  <a href="news3.php"><img src="images/album3.png" class="w-100" alt="image3"></a>
+		  <a href="https://sei.dost.gov.ph/index.php/news-archive/425-stem-teach-learning-the-basics-of-geogebra-as-a-tool-in-teaching-mathematics"><img src="images/album3.png" class="w-100" alt="image3"></a>
             <div class="card-body">
               <p class="card-text">STEM Teach: Learning the Basics of GeoGebra as a Tool in Teaching Mathematics</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-				<a href="news3.php">
+				<a href="https://sei.dost.gov.ph/index.php/news-archive/425-stem-teach-learning-the-basics-of-geogebra-as-a-tool-in-teaching-mathematics">
                   <button type="button" class="btn btn-sm btn-outline-secondary">Read more</button>
 				</a>
                 </div>
