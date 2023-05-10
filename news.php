@@ -14,6 +14,10 @@ if (!isset($_SESSION['loggedin'])) {
 		<title>News Page</title>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 	</head>
 	<body class="loggedin">
 		<nav class="navtop">
@@ -39,5 +43,58 @@ if (!isset($_SESSION['loggedin'])) {
                 <br>*News Articles to follow.
             </p>
 		</div>
+		<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+		  <a href="news1.php"><img src="images/album1.jpg" class="w-100" alt="image1"></a>
+            <div class="card-body">
+              <p class="card-text">Philippines’ oldest regional science centrum just got revamped, DOST-SEI NuLab bus joins the fun</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+				<a href="news1.php">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Read more</button>
+				</a>
+                </div>
+                <small class="text-body-secondary">20 April 2023</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+		  <a href="news2.php"><img src="images/album2.png" class="w-100" alt="image2"></a>
+            <div class="card-body">
+              <p class="card-text">Films on nationalism, community development highlighted in DOST-SEI's video-making competition</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+				<a href="news2.php">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Read more</button>
+				</a>
+                </div>
+                <small class="text-body-secondary">25 April 2023</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+		  <a href="news3.php"><img src="images/album3.png" class="w-100" alt="image3"></a>
+            <div class="card-body">
+              <p class="card-text">STEM Teach: Learning the Basics of GeoGebra as a Tool in Teaching Mathematics</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+				<a href="news3.php">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Read more</button>
+				</a>
+                </div>
+                <small class="text-body-secondary">27 April 2023</small>
+              </div>
+            </div>
+          </div>
+        </div>
+	</div>
 	</body>
 </html>
