@@ -125,7 +125,7 @@ if (!isset($_SESSION['loggedin'])) {
 													?>
 													<td>
 														<?php
-														echo '<a href="CRUDReadTOR.php?id=' . $row['tor_pdf'] . '" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
+														echo '<a href="CRUDReadTOR.php?id=' . $row['tor_pdf'] . '" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye""></span></a>';
 														echo '<a href="CRUDUpdateTOR.php?id=' . $row['id'] . '" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
 														?>
 													</td>
@@ -180,9 +180,7 @@ if (!isset($_SESSION['loggedin'])) {
 									echo "</table>";
 									// Free result set
 									$result->free();
-								} else {
-									// echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
-								}
+								} 
 							} else {
 								echo "Oops! Something went wrong. Please try again later.";
 							}
@@ -224,8 +222,6 @@ if (!isset($_SESSION['loggedin'])) {
 									echo "</table>";
 									// Free result set
 									$result->free();
-								} else {
-									// echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
 								}
 							} else {
 								echo "Oops! Something went wrong. Please try again later.";
@@ -268,8 +264,6 @@ if (!isset($_SESSION['loggedin'])) {
 									echo "</table>";
 									// Free result set
 									$result->free();
-								} else {
-									// echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
 								}
 							} else {
 								echo "Oops! Something went wrong. Please try again later.";
