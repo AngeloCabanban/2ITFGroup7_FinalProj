@@ -195,6 +195,11 @@ require_once "CRUDConfig.php";
                         ?>
 
                     </form>
+
+                    <div class="form-group">
+                        <a href="profile.php"><input type="submit" value="Return"></a>
+                    </div>
+
                 </div>
             </div>
         </div>

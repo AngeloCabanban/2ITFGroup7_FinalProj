@@ -1,4 +1,5 @@
 <?php
+require_once "CRUDConfig.php";
 session_start();
 // Change this to your connection info.
 $DATABASE_HOST = 'localhost';
@@ -30,23 +31,30 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE email = ?')) 
         // Account exists, now we verify the password.
         // Note: remember to use password_hash in your registration file to store the hashed passwords.
         if ($_POST['password'] === $password) {
-            // Verification success! User has logged-in!
-            // Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
-            session_regenerate_id();
-            $_SESSION['loggedin'] = TRUE;
-            $_SESSION['name'] = $_POST['email'];
-            $_SESSION['id'] = $id;
-            header('Location: ChangePW.php');
+            if ($_POST['newPW'] === $_POST['repeatNewPW']) {
+                // Verification success! User has logged-in!
+                // Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
+                session_regenerate_id();
+                $_SESSION['loggedin'] = TRUE;
+                $_SESSION['name'] = $_POST['email'];
+                $_SESSION['id'] = $id;
+
+                $updatequery = "UPDATE accounts SET password = '$_POST[newPW]' WHERE id='$id'";
+                // Execute insert query
+                $uquery = mysqli_query($mysqli, $updatequery);
+
+                header('Location: profile.php');
+            } else {
+                echo 'Passwords do not match!';
+            }
         } else {
             // Incorrect password
             echo 'Incorrect Password!';
         }
     } else {
         // Incorrect username
-        echo 'Incorrect Username!';
+        echo 'Username not found!';
     }
 
     $stmt->close();
 }
-
-?>

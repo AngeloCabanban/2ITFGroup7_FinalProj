@@ -10,8 +10,8 @@
 
 <body>
     <div class="login">
-        <h1>User Verification</h1>
-        <form action="AuthenticatePWUpdate.php" method="post">
+        <h1>Change Password</h1>
+        <form action="authenticateVerifyUserPWUpdate.php" method="post">
             <label for="email">
                 <i class="fas fa-user"></i>
             </label>
@@ -19,7 +19,15 @@
             <label for="password">
                 <i class="fas fa-lock"></i>
             </label>
-            <input type="password" name="password" placeholder="Password" id="password" required>
+            <input type="password" name="password" placeholder="Old Password" id="password" required>
+            <label for="newPW">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="newPW" placeholder="New Password" id="newPW" required>
+            <label for="repeatNewPW">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="repeatNewPW" placeholder="Repeat New Password" id="repeatNewPW" required>
             <input type="submit" value="Verify Credentials">
         </form>
         <a href="profile.php" class="btn btn-primary">Return</a>

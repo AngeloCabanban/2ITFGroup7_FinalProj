@@ -43,7 +43,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE email = ?')) 
         }
     } else {
         // Incorrect username
-        echo 'Incorrect Username!';
+        echo 'Username not found!';
     }
 
     $stmt->close();
