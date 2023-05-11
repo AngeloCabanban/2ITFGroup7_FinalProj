@@ -162,26 +162,26 @@ require_once "CRUDConfig.php";
                         <div class="form-input py-2">
                             <div class="form-group">
                                 <strong>DOST-SEI Scholar Email Address</strong>
-                                <input type="text" class="form-control" placeholder="Email" name="emailreq" required>
+                                <input type="text" name="emailreq" class="form-control" placeholder="Email"  required>
                             </div>
                             <strong>Upload Transcript of Records</strong>
                             <div class="form-group">
-                                <input type="file" name="tor_pdf" class="form-control" accept=".pdf" required />
+                                <input type="file" name="tor_pdf" class="form-control" placeholder="Transcript of Records" accept=".pdf" required />
                             </div>
 
                             <strong>Upload Terminal Report Form</strong>
                             <div class="form-group">
-                                <input type="file" name="trf_pdf" class="form-control" accept=".pdf" required />
+                                <input type="file" name="trf_pdf" class="form-control" placeholder="Terminal Report Form" accept=".pdf" required />
                             </div>
 
                             <strong>Upload Registration Form</strong>
                             <div class="form-group">
-                                <input type="file" name="rf_pdf" class="form-control" accept=".pdf" required />
+                                <input type="file" name="rf_pdf" class="form-control" placeholder="Registration Form" accept=".pdf" required />
                             </div>
 
                             <strong>Upload Gratitude Letter to the Foundation</strong>
                             <div class="form-group">
-                                <input type="file" name="gl_pdf" class="form-control" accept=".pdf" required />
+                                <input type="file" name="gl_pdf" class="form-control" placeholder="Gratitude Letter to the Foundation" accept=".pdf" required />
                             </div>
 
                             <div class="form-group">
@@ -190,14 +190,13 @@ require_once "CRUDConfig.php";
                         </div>
                         <?php
                         // Close connection
-                        $stmt->close();
                         $mysqli->close();
                         ?>
 
                     </form>
 
                     <div class="form-group">
-                        <a href="profile.php"><input type="submit" value="Return"></a>
+                        <a href="requirements.php"><input type="submit" value="Return"></a>
                     </div>
 
                 </div>

@@ -64,220 +64,270 @@ if (!isset($_SESSION['loggedin'])) {
 		</p>
 	</div>
 
-	<form method="POST">
-		<div class="wrapper">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mt-5 mb-3 clearfix">
-							<h2 class="pull-left">Submissions</h2>
+	<div class="wrapper">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mt-5 mb-3 clearfix">
+						<h2 class="pull-left">Submissions</h2>
 
-							<?php
-							$sql1 = "SELECT id FROM transcript_of_records";
-							$sql2 = "SELECT id FROM terminal_report_form";
-							$sql3 = "SELECT id FROM registration_form";
-							$sql4 = "SELECT id FROM gratitude_letter";
+						<?php
+						$sql1 = "SELECT id FROM transcript_of_records WHERE email='$_SESSION[name]'";
+						$sql2 = "SELECT id FROM terminal_report_form WHERE email='$_SESSION[name]'";
+						$sql3 = "SELECT id FROM registration_form WHERE email='$_SESSION[name]'";
+						$sql4 = "SELECT id FROM gratitude_letter WHERE email='$_SESSION[name]'";
 
-							if ($result1 = $mysqli->query($sql1)) {
-								if ($result2 = $mysqli->query($sql2)) {
-									if ($result3 = $mysqli->query($sql3)) {
-										if ($result4 = $mysqli->query($sql4)) {
-											if ($result4->num_rows > 0) {
-											} else {
-							?>
-												<a href="CRUDCreate.php" class="btn btn-success pull-right">
-													<i class="fa fa-plus"></i> Upload Requirements
-												</a>
-							<?php
-											}
-										}
-									}
-								}
-							}
-							?>
-
-						</div>
-
-						<div name="tor_pdf">
-							<?php
-
-							$sql = "SELECT * FROM transcript_of_records WHERE email = '$_SESSION[name]'";
-
-							if ($result = $mysqli->query($sql)) {
-								if ($result->num_rows > 0) {
-							?>
-									<table class="table table-bordered table-striped">
-										<thead>
-											<tr>
-												<th>Transcript of Records</th>
-												<th>Status</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php
-											if ($_SESSION['name']) {
-												$row = $result->fetch_array(MYSQLI_ASSOC);
-											?>
-												<tr>
-													<?php
-													echo "<td>" . $row['tor_pdf'] . "</td>";
-													echo "<td>" . $row['status'] . "</td>";
-													?>
-													<td>
-														<?php
-														echo '<a href="CRUDReadTOR.php?id=' . $row['tor_pdf'] . '" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye""></span></a>';
-														echo '<a href="CRUDUpdateTOR.php?id=' . $row['id'] . '" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-														?>
-													</td>
-												</tr>
-									<?php
-												echo "</tbody>";
-												echo "</table>";
-											}
-											// Free result set
-											$result->free();
+						if ($result1 = $mysqli->query($sql1)) {
+							if ($result2 = $mysqli->query($sql2)) {
+								if ($result3 = $mysqli->query($sql3)) {
+									if ($result4 = $mysqli->query($sql4)) {
+										if ($result4->num_rows > 0) {
 										} else {
-											// echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+						?>
+											<a href="CRUDCreate.php" class="btn btn-success pull-right">
+												<i class="fa fa-plus"></i> Upload Requirements
+											</a>
+						<?php
 										}
-									} else {
-										echo "Oops! Something went wrong. Please try again later.";
 									}
-									?>
-						</div>
-
-						<div name="trf_pdf">
-							<?php
-							// Attempt select query execution
-							$sql = "SELECT * FROM terminal_report_form WHERE email = '$_SESSION[name]'";
-							if ($result = $mysqli->query($sql)) {
-								if ($result->num_rows > 0) {
-							?>
-									<table class="table table-bordered table-striped">
-										<thead>
-											<tr>
-												<th>Terminal Report Form</th>
-												<th>Status</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php
-											$row = $result->fetch_array()
-											?>
-											<tr>
-												<?php
-												echo "<td>" . $row['trf_pdf'] . "</td>";
-												echo "<td>" . $row['status'] . "</td>";
-												?>
-												<td>
-													<?php
-													echo '<a href="CRUDReadTRF.php?id=' . $row['id'] . '" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-													echo '<a href="CRUDUpdateTRF.php?id=' . $row['id'] . '" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-													?>
-												</td>
-											</tr>
-									<?php
-									echo "</tbody>";
-									echo "</table>";
-									// Free result set
-									$result->free();
-								} 
-							} else {
-								echo "Oops! Something went wrong. Please try again later.";
-							}
-									?>
-						</div>
-
-						<div name="rf_pdf">
-							<?php
-							// Attempt select query execution
-							$sql = "SELECT * FROM registration_form WHERE email = '$_SESSION[name]'";
-							if ($result = $mysqli->query($sql)) {
-								if ($result->num_rows > 0) {
-							?>
-									<table class="table table-bordered table-striped">
-										<thead>
-											<tr>
-												<th>Registration Form</th>
-												<th>Status</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php
-											$row = $result->fetch_array()
-											?>
-											<tr>
-												<?php
-												echo "<td>" . $row['rf_pdf'] . "</td>";
-												echo "<td>" . $row['status'] . "</td>";
-												?>
-												<td>
-													<?php
-													echo '<a href="CRUDReadRF.php?id=' . $row['id'] . '" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-													echo '<a href="CRUDUpdateRF.php?id=' . $row['id'] . '" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-													?>
-												</td>
-											</tr>
-									<?php
-									echo "</tbody>";
-									echo "</table>";
-									// Free result set
-									$result->free();
 								}
-							} else {
-								echo "Oops! Something went wrong. Please try again later.";
 							}
-									?>
-						</div>
-
-						<div name="gl_pdf">
-							<?php
-							// Attempt select query execution
-							$sql = "SELECT * FROM gratitude_letter WHERE email = '$_SESSION[name]'";
-							if ($result = $mysqli->query($sql)) {
-								if ($result->num_rows > 0) {
-							?>
-									<table class="table table-bordered table-striped">
-										<thead>
-											<tr>
-												<th>Gratitude Letter</th>
-												<th>Status</th>
-											</tr>
-										</thead>
-										<tbody>
-											<?php
-											$row = $result->fetch_array()
-											?>
-											<tr>
-												<?php
-												echo "<td>" . $row['gl_pdf'] . "</td>";
-												echo "<td>" . $row['status'] . "</td>";
-												?>
-												<td>
-													<?php
-													echo '<a href="CRUDReadGL.php?id=' . $row['id'] . '" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-													echo '<a href="CRUDUpdateGL.php?id=' . $row['id'] . '" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-													?>
-												</td>
-											</tr>
-									<?php
-									echo "</tbody>";
-									echo "</table>";
-									// Free result set
-									$result->free();
-								}
-							} else {
-								echo "Oops! Something went wrong. Please try again later.";
-							}
-							// Close connection
-							$mysqli->close();
-									?>
-						</div>
+						}
+						?>
 
 					</div>
+
+					<div name="tor_pdf">
+						<?php
+
+						$sql = "SELECT * FROM transcript_of_records WHERE email = '$_SESSION[name]'";
+
+						if ($result = $mysqli->query($sql)) {
+							if ($result->num_rows > 0) {
+						?>
+								<table class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th>Transcript of Records</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php
+										if ($_SESSION['name']) {
+											$row = $result->fetch_array(MYSQLI_ASSOC);
+										?>
+											<tr>
+												<form action="CRUDRead.php" method="POST">
+													<td>
+														<?php echo $row['tor_pdf']; ?>
+														<input type="hidden" name="torInput" class="form-control"><?php $row['tor_pdf']; ?></input>
+													</td>
+													<td>
+														<?php echo $row['status']; ?>
+														<input type="hidden" name="torStatus" class="form-control"><?php $row['status']; ?></input>
+													</td>
+													<td>
+														<button type="submit" name="readTOR" style="border:0; background:none"><i class="fa fa-eye"></i></button>
+													</td>
+												</form>
+												<form action="CRUDUpdateTOR.php" method="POST">
+													<td>
+														<input type="hidden" name="torInput" class="form-control"><?php $row['tor_pdf']; ?></input>
+														<input type="hidden" name="torStatus" class="form-control"><?php $row['status']; ?></input>
+														<button type="submit" name="updateTOR" style="border:0; background:none"><i class="fa fa-pencil"></i></button>
+													</td>
+												</form>
+											</tr>
+								<?php
+											echo "</tbody>";
+											echo "</table>";
+										}
+										// Free result set
+										$result->free();
+									} else {
+										// echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+									}
+								} else {
+									echo "Oops! Something went wrong. Please try again later.";
+								}
+								?>
+					</div>
+
+					<div name="trf_pdf">
+						<?php
+						// Attempt select query execution
+						$sql = "SELECT * FROM terminal_report_form WHERE email = '$_SESSION[name]'";
+						if ($result = $mysqli->query($sql)) {
+							if ($result->num_rows > 0) {
+						?>
+								<table class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th>Terminal Report Form</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php
+										if ($_SESSION['name']) {
+											$row = $result->fetch_array(MYSQLI_ASSOC);
+										?>
+											<tr>
+												<form action="CRUDRead.php" method="POST">
+													<td>
+														<?php echo $row['trf_pdf']; ?>
+														<input type="hidden" name="trfInput" class="form-control"><?php $row['trf_pdf']; ?></input>
+													</td>
+													<td>
+														<?php echo $row['status']; ?>
+														<input type="hidden" name="trfStatus" class="form-control"><?php $row['status']; ?></input>
+													</td>
+													<td>
+														<button type="submit" name="readTRF" style="border:0; background:none"><i class="fa fa-eye"></i></button>
+													</td>
+												</form>
+												<form action="CRUDUpdateTRF.php" method="POST">
+													<td>
+														<input type="hidden" name="trfInput" class="form-control"><?php $row['trf_pdf']; ?></input>
+														<input type="hidden" name="trfStatus" class="form-control"><?php $row['status']; ?></input>
+														<button type="submit" name="updateTRF" style="border:0; background:none"><i class="fa fa-pencil"></i></button>
+													</td>
+												</form>
+											</tr>
+								<?php
+											echo "</tbody>";
+											echo "</table>";
+										}
+										// Free result set
+										$result->free();
+									} else {
+										// echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+									}
+								} else {
+									echo "Oops! Something went wrong. Please try again later.";
+								}
+								?>
+					</div>
+
+					<div name="rf_pdf">
+						<?php
+						// Attempt select query execution
+						$sql = "SELECT * FROM registration_form WHERE email = '$_SESSION[name]'";
+						if ($result = $mysqli->query($sql)) {
+							if ($result->num_rows > 0) {
+						?>
+								<table class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th>Registration Form</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php
+										if ($_SESSION['name']) {
+											$row = $result->fetch_array(MYSQLI_ASSOC);
+										?>
+											<tr>
+												<form action="CRUDRead.php" method="POST">
+													<td>
+														<?php echo $row['rf_pdf']; ?>
+														<input type="hidden" name="rfInput" class="form-control"><?php $row['rf_pdf']; ?></input>
+													</td>
+													<td>
+														<?php echo $row['status']; ?>
+														<input type="hidden" name="rfStatus" class="form-control"><?php $row['status']; ?></input>
+													</td>
+													<td>
+														<button type="submit" name="readRF" style="border:0; background:none"><i class="fa fa-eye"></i></button>
+													</td>
+												</form>
+												<form action="CRUDUpdateRF.php" method="POST">
+													<td>
+														<input type="hidden" name="rfInput" class="form-control"><?php $row['rf_pdf']; ?></input>
+														<input type="hidden" name="rfStatus" class="form-control"><?php $row['status']; ?></input>
+														<button type="submit" name="updateRF" style="border:0; background:none"><i class="fa fa-pencil"></i></button>
+													</td>
+												</form>
+											</tr>
+								<?php
+											echo "</tbody>";
+											echo "</table>";
+										}
+										// Free result set
+										$result->free();
+									} else {
+										// echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+									}
+								} else {
+									echo "Oops! Something went wrong. Please try again later.";
+								}
+								?>
+					</div>
+
+					<div name="gl_pdf">
+						<?php
+						// Attempt select query execution
+						$sql = "SELECT * FROM gratitude_letter WHERE email = '$_SESSION[name]'";
+						if ($result = $mysqli->query($sql)) {
+							if ($result->num_rows > 0) {
+						?>
+								<table class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th>Gratitude Letter</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php
+										if ($_SESSION['name']) {
+											$row = $result->fetch_array(MYSQLI_ASSOC);
+										?>
+											<tr>
+												<form action="CRUDRead.php" method="POST">
+													<td>
+														<?php echo $row['gl_pdf']; ?>
+														<input type="hidden" name="glInput" class="form-control"><?php $row['gl_pdf']; ?></input>
+													</td>
+													<td>
+														<?php echo $row['status']; ?>
+														<input type="hidden" name="glStatus" class="form-control"><?php $row['status']; ?></input>
+													</td>
+													<td>
+														<button type="submit" name="readGL" style="border:0; background:none"><i class="fa fa-eye"></i></button>
+													</td>
+												</form>
+												<form action="CRUDUpdateGL.php" method="POST">
+													<td>
+														<input type="hidden" name="glInput" class="form-control"><?php $row['gl_pdf']; ?></input>
+														<input type="hidden" name="glStatus" class="form-control"><?php $row['status']; ?></input>
+														<button type="submit" name="updateGL" style="border:0; background:none"><i class="fa fa-pencil"></i></button>
+													</td>
+												</form>
+											</tr>
+								<?php
+											echo "</tbody>";
+											echo "</table>";
+										}
+										// Free result set
+										$result->free();
+									} else {
+										// echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+									}
+								} else {
+									echo "Oops! Something went wrong. Please try again later.";
+								}
+								// Close connection
+								$mysqli->close();
+								?>
+					</div>
+
 				</div>
 			</div>
 		</div>
-	</form>
+	</div>
 
 </body>
 
