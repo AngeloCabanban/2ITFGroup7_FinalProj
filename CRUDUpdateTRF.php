@@ -61,14 +61,14 @@ require_once "CRUDConfig.php";
                                     $trf = $_FILES['trf_pdf']['type'];
                                     if (isset($_FILES['trf_pdf']['name']) && $trf == 'application/pdf') {
 
-                                            $file_name = $_FILES['trf_pdf']['name'];
-                                            $file_tmp = $_FILES['trf_pdf']['tmp_name'];
-                                            // Move the uploaded pdf file into the pdf folder
-                                            move_uploaded_file($file_tmp, "./terminal_report_form/" . $file_name);
-                                            // Insert the submitted data from the form into the table
-                                            $insertquery = "UPDATE terminal_report_form SET email='$email', directory='/2ITFGroup7_FinalProj/terminal_report_form/', trf_pdf='$file_name', status='PENDING' WHERE id='$id'";
-                                            // Execute insert query
-                                            $iquery = mysqli_query($mysqli, $insertquery);
+                                        $file_name = $_FILES['trf_pdf']['name'];
+                                        $file_tmp = $_FILES['trf_pdf']['tmp_name'];
+                                        // Move the uploaded pdf file into the pdf folder
+                                        move_uploaded_file($file_tmp, "./terminal_report_form/" . $file_name);
+                                        // Insert the submitted data from the form into the table
+                                        $insertquery = "UPDATE terminal_report_form SET email='$email', directory='/2ITFGroup7_FinalProj/terminal_report_form/', trf_pdf='$file_name', status='PENDING' WHERE id='$id'";
+                                        // Execute insert query
+                                        $iquery = mysqli_query($mysqli, $insertquery);
                                         // }
 
                                         if ($iquery) {
@@ -130,6 +130,8 @@ require_once "CRUDConfig.php";
                         // $stmt->close();
                         $mysqli->close();
                         ?>
+
+                        <p><a href="requirements.php" class="btn btn-primary">Return</a></p>
 
                     </form>
                 </div>

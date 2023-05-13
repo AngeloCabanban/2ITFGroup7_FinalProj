@@ -54,7 +54,6 @@ if (!isset($_SESSION['loggedin'])) {
 	</nav>
 	<div class="content">
 		<h2>Requirements Page</h2>
-		<h4><?php echo $_SESSION['name']; ?></h4>
 		<p>
 			<br>- Forms
 			<br>- Requires Database Connection*

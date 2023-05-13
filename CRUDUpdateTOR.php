@@ -61,14 +61,14 @@ require_once "CRUDConfig.php";
                                     $tor = $_FILES['tor_pdf']['type'];
                                     if (isset($_FILES['tor_pdf']['name']) && $tor == 'application/pdf') {
 
-                                            $file_name = $_FILES['tor_pdf']['name'];
-                                            $file_tmp = $_FILES['tor_pdf']['tmp_name'];
-                                            // Move the uploaded pdf file into the pdf folder
-                                            move_uploaded_file($file_tmp, "./transcript_of_records/" . $file_name);
-                                            // Insert the submitted data from the form into the table
-                                            $insertquery = "UPDATE transcript_of_records SET email='$email', directory='/2ITFGroup7_FinalProj/transcript_of_records/', tor_pdf='$file_name', status='PENDING' WHERE id='$id'";
-                                            // Execute insert query
-                                            $iquery = mysqli_query($mysqli, $insertquery);
+                                        $file_name = $_FILES['tor_pdf']['name'];
+                                        $file_tmp = $_FILES['tor_pdf']['tmp_name'];
+                                        // Move the uploaded pdf file into the pdf folder
+                                        move_uploaded_file($file_tmp, "./transcript_of_records/" . $file_name);
+                                        // Insert the submitted data from the form into the table
+                                        $insertquery = "UPDATE transcript_of_records SET email='$email', directory='/2ITFGroup7_FinalProj/transcript_of_records/', tor_pdf='$file_name', status='PENDING' WHERE id='$id'";
+                                        // Execute insert query
+                                        $iquery = mysqli_query($mysqli, $insertquery);
                                         // }
 
                                         if ($iquery) {
@@ -130,6 +130,8 @@ require_once "CRUDConfig.php";
                         // $stmt->close();
                         $mysqli->close();
                         ?>
+
+                        <p><a href="requirements.php" class="btn btn-primary">Return</a></p>
 
                     </form>
                 </div>
