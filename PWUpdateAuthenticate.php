@@ -30,7 +30,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE email = ?')) 
         $stmt->fetch();
         // Account exists, now we verify the password.
         // Note: remember to use password_hash in your registration file to store the hashed passwords.
-        if ($_POST['password'] === $password) {
+        if (MD5(password_verify($_POST['password'], $password))) {
             if ($_POST['newPW'] === $_POST['repeatNewPW']) {
                 // Verification success! User has logged-in!
                 // Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
@@ -57,7 +57,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE email = ?')) 
                                 <p>New and Repeated Passwords do not match!</p>
                             </div>
                             <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
-                                <a href="indexLogin.html"> <button type="button" class="btn btn-lg btn-primary">Go back</button></a>
+                                <a href="PWUpdate.html"> <button type="button" class="btn btn-lg btn-primary">Go back</button></a>
                             </div>
                         </div>
                     </div>
