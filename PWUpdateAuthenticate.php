@@ -45,15 +45,51 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE email = ?')) 
 
                 header('Location: profile.php');
             } else {
-                echo 'Passwords do not match!';
+?>
+
+                <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalSheet">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content rounded-4 shadow">
+                            <div class="modal-header border-bottom-0">
+                                <h1 class="modal-title fs-5">ERROR</h1>
+                            </div>
+                            <div class="modal-body py-0">
+                                <p>New and Repeated Passwords do not match!</p>
+                            </div>
+                            <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
+                                <a href="indexLogin.html"> <button type="button" class="btn btn-lg btn-primary">Go back</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <?php
             }
         } else {
             // Incorrect password
-            echo 'Incorrect Password!';
+            header('Location: ErrorPassword.php');
         }
     } else {
         // Incorrect username
-        echo 'Username not found!';
+        ?>
+
+        <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalSheet">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-4 shadow">
+                    <div class="modal-header border-bottom-0">
+                        <h1 class="modal-title fs-5">ERROR</h1>
+                    </div>
+                    <div class="modal-body py-0">
+                        <p>Incorrect Username</p>
+                    </div>
+                    <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
+                        <a href="indexLogin.html"> <button type="button" class="btn btn-lg btn-primary">Go back</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<?php
     }
 
     $stmt->close();
