@@ -39,7 +39,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE email = ?')) 
                 $_SESSION['name'] = $_POST['email'];
                 $_SESSION['id'] = $id;
 
-                $updatequery = "UPDATE accounts SET password = '$_POST[newPW]' WHERE id='$id'";
+                $updatequery = "UPDATE accounts SET password = MD5('$_POST[newPW]') WHERE id='$id'";
                 // Execute insert query
                 $uquery = mysqli_query($mysqli, $updatequery);
 
