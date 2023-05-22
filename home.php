@@ -15,6 +15,7 @@ if (!isset($_SESSION['loggedin'])) {
 	<title>Home Page</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
     <script src="bootstrap/js/popper.min.js"></script>
@@ -69,31 +70,26 @@ if (!isset($_SESSION['loggedin'])) {
 				<span class="visually-hidden">Next</span>
 			</button>
 			</div>
+			
 	<div class="content">
 		<h2>Home Page</h2>
-		<p>
-			<br>( https://www.sei.dost.gov.ph/index.php/programs-and-projects/scholarships/undergraduate-scholarships#s-t-undergraduate-scholarships )
-			<br>- Preview of News (Carousel, at least 3-5 featured articles)
-			<br>- Welcome Text (Use Information from Login Database)
-			<br>- Brief Info about S&T Undergraduate Scholarships
-			<br>(See text under S&T Undergraduate Scholarships)
-			<br>- Two Types of Scholarship including a Short Description for each type (See text under Types of Scholarship)
-			<br><br>
-			<b>S&T Undergraduate Scholarships</b>
-			<br><br>
-			The S&T Undergraduate Scholarships Program aims to stimulate and entice talented Filipino youths to pursue lifetime productive careers in science and technology and ensure a steady, adequate supply of qualified S&T human resources which can steer the country towards national progress.
-			<br><br>
-			<b>Types of Scholarship:</b>
-			<br>
-			<b> MERIT </b>
-			<br>
-			The DOST-SEI Merit Scholarship Program, formerly known as the NSDB or NSTA Scholarship under RA No. 2067, is awarded to students with high aptitude in science and mathematics and are willing to pursue careers in the fields of science and technology.
-			<br><br>
-			<b>RA 7687 </b>
-			<br>
-			Republic Act No. 7687, also known as the “Science and Technology Scholarship Act of 1994”, provides for scholarships to talented and deserving students whose families’ socio-economic status does not exceed the set cut-off values of certain indicators. Qualifiers must pursue priority fields of study in the basic sciences, engineering, other applied sciences, and science and mathematics teaching.
-			<br><br>
-		</p>
+		<p></p>
+
+		<section id="cardSection" style="padding-bottom: 100px;">
+    <div class="card" style="width: 18rem; float: right;">
+      <div class="card-body">
+        Navigate through these links:
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a href="#" class="card-link">Cras justo odio</a></li>
+          <li class="list-group-item"><a href="#" class="card-link">Cras justo odio</a></li>
+          <li class="list-group-item"><a href="#" class="card-link">Cras justo odio</a></li>
+          <li class="list-group-item"><a href="#" class="card-link">Cras justo odio</a></li>
+          <li class="list-group-item"><a href="#" class="card-link">Cras justo odio</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
 		<?php
 
 		$select = "SELECT name FROM accounts WHERE email = '$_SESSION[name]'";
