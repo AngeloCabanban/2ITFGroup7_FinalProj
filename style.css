@@ -141,10 +141,6 @@ a {
     text-decoration: none;
     color: black;
 }
-a.btn{
-    background-color: #57baf3;
-    border: #57baf3;
-}
 /*home page tab*/
 #wrapper{
     position: absolute;

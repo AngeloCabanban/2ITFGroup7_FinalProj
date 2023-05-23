@@ -67,7 +67,7 @@ if (!isset($_SESSION['loggedin'])) {
 			</table>
 			<br><br>
 			<form method="post" action="PWUpdate.html">
-				<input type="submit" id="changePW" value="Change Password" />
+				<input type="submit" class="btn btn-primary" id="changePW" value="Change Password" />
 			</form>
 		</div>
 	</div>

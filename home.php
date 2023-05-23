@@ -51,8 +51,7 @@ if (!isset($_SESSION['loggedin'])) {
         	<div class="container">
           		<div class="carousel-caption text-start">
             		<h1>STEM Teach: Learning the Basics of GeoGebra as a Tool in Teaching Mathematics</h1>
-            		<p>Some representative placeholder content for the first slide of the carousel.</p>
-            		<p><a class="btn btn-lg btn-primary" href="https://www.sei.dost.gov.ph/index.php/news-archive/425-stem-teach-learning-the-basics-of-geogebra-as-a-tool-in-teaching-mathematics" target="_blank">Read More</a></p>
+            		<p><a class="btn btn-primary" href="https://www.sei.dost.gov.ph/index.php/news-archive/425-stem-teach-learning-the-basics-of-geogebra-as-a-tool-in-teaching-mathematics" target="_blank">Read More</a></p>
           		</div>
         	</div>
       	</div>
@@ -61,8 +60,7 @@ if (!isset($_SESSION['loggedin'])) {
         	<div class="container">
           		<div class="carousel-caption text-start">
             		<h1>Films on nationalism, community development highlighted in DOST-SEI's video-making competition</h1>
-            		<p>Some representative placeholder content for the first slide of the carousel.</p>
-            		<p><a class="btn btn-lg btn-primary" href="https://www.sei.dost.gov.ph/index.php/news-archive/424-films-on-nationalism-community-development-highlighted-in-dost-sei-s-video-making-competition" target="_blank">Read More</a></p>
+            		<p><a class="btn btn-primary" href="https://www.sei.dost.gov.ph/index.php/news-archive/424-films-on-nationalism-community-development-highlighted-in-dost-sei-s-video-making-competition" target="_blank">Read More</a></p>
           		</div>
         	</div>
       	</div>
@@ -71,8 +69,7 @@ if (!isset($_SESSION['loggedin'])) {
         	<div class="container">
           		<div class="carousel-caption text-start">
             		<h1>Philippines’ oldest regional science centrum just got revamped, DOST-SEI NuLab bus joins the fun</a></h1>
-            		<p>Some representative placeholder content for the first slide of the carousel.</p>
-            		<p><a class="btn btn-lg btn-primary" href="https://www.sei.dost.gov.ph/index.php/news-archive/423-philippines-oldest-regional-science-centrum-just-got-revamped-dost-sei-nulab-bus-joins-the-fun" target="_blank">Read More</a></p>
+            		<p><a class="btn btn-primary" href="https://www.sei.dost.gov.ph/index.php/news-archive/423-philippines-oldest-regional-science-centrum-just-got-revamped-dost-sei-nulab-bus-joins-the-fun" target="_blank">Read More</a></p>
           		</div>
         	</div>
       	</div>
