@@ -808,6 +808,7 @@ if (!isset($_SESSION['loggedin'])) {
               evt.currentTarget.className += " active";
             } 
 
+        // Get the element with id="defaultOpen" and click on it
         document.getElementById("default").click();
 	    </script>
     </div>
