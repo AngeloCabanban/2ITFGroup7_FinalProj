@@ -106,7 +106,7 @@ if (!isset($_SESSION['loggedin'])) {
 				<b>Organizational Chart</b>
 				<br>
 				</p>
-				<img src="images/OrgChart.png" class="rounded mx-auto d-block img-thumbnail">
+				<img src="https://www.sei.dost.gov.ph/images/others/orgchart.png" class="rounded mx-auto d-block img-thumbnail">
 			</div>
 
 			<div id="datap" class="tabcontent" style="text-align: justify">
