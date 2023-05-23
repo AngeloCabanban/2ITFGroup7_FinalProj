@@ -18,70 +18,51 @@ if (!isset($_SESSION['loggedin'])) {
     <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
     <script src="bootstrap/js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+	<style>
+        table {
+          border-collapse: collapse;
+        }
+        tr { 
+          border: solid;
+          border-width: 1px 0;
+        }
+        tr:first-child {
+        border-top: none;
+        }
+        tr:last-child {
+        border-bottom: none;
+        }
+        td{
+          border: none;
+        }
+        </style>
 	</head>
 	<body class="loggedin">
 		<nav class="navtop">
 			<div>
                 <img src="images/logo.png" alt="logo">
-				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-				<a href="home.php"><i class="fa-solid fa-house"></i>Home</a>
-				<a href="scholarship.php"><i class="fa-solid fa-graduation-cap"></i>Scholarship</a>
-				<a href="requirements.php"><i class="fa-brands fa-wpforms"></i>Requirements</a>
-				<a href="news.php"><i class="fa-solid fa-bullhorn"></i>News</a>
-				<a href="about.php"><i class="fa-solid fa-address-card"></i>About</a>
-				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+				<a href="profile.php">Profile</a>
+				<a href="home.php">Home</a>
+				<a href="scholarship.php">Scholarship</a>
+				<a href="requirements.php">Requirements</a>
+				<a href="news.php">News</a>
+				<a href="about.php">About</a>
+				<a href="logout.php">Logout</a>
 			</div>
 		</nav>
 		<div class="content">
 			<h2>About Page</h2>
-			<p>
-                <br>Sub Tabs:
-				<br><br>1. About DOST-SEI
-				<br>- Mandate, Vision, and Mission
-				<br>( https://www.sei.dost.gov.ph/index.php/about-dost-sei/mandate-vision-and-mission )
-                <br>- Data Privacy
-				<br>( https://www.sei.dost.gov.ph/index.php/about-dost-sei/data-privacy-notice )
-                <br><br>2. About the Developers
-                <br>- Photo of each Member
-                <br>- Brief Information (Name, School, etc.)
-                <br>- Quote
-				<br><br>FAQs Page:
-				<br>- FAQs about Undergraduate Scholarships
-				<br>( https://www.sei.dost.gov.ph/images/stsd/ugradFAQ.pdf )
-				<br>- How to open a Landbank Account
-				<br>( https://www.sei.dost.gov.ph/images/others/lbpopen.jpg )
-				<br>*Get the necessary information from the files.
-				<br><br>Contact Us:
-				<br>- Email API Integration (to follow)
-				<br>- Contact Details
-				<br>Email Addresses, Social Media Links, Phone Numbers
-				<br>*Check For Further Inquiries & Contact Us Page.
-				<br>*Social Media Pages to follow.
-				<br><br>Social Media Pages + Official DOST-SEI Website  
-				<br> - https://sei.dost.gov.ph/ + Facebook Page
-				<br> - https://www.facebook.com/DOST.SEI/ + Facebook Group
-				<br> - https://www.facebook.com/people/DOST-Scholarship/100063939799753/
-            </p>
-			<ul class="nav nav-tabs" id="myTab" role="tablist">
-					<li class="nav-item" role="presentation">
-			<button class="nav-link active" id="Vision-tab" data-bs-toggle="tab" data-bs-target="#Vision-tab-pane" type="button" role="tab" aria-controls="Vision-tab-pane" aria-selected="true">Mandate, Vision, and Mission</button>
-		</li>
-		<li class="nav-item" role="presentation">
-			<button class="nav-link" id="Privacy-tab" data-bs-toggle="tab" data-bs-target="#Privacy-tab-pane" type="button" role="tab" aria-controls="Privacy-tab-pane" aria-selected="false">Data Privacy</button>
-		</li>
-		<li class="nav-item" role="presentation">
-			<button class="nav-link" id="Developers-tab" data-bs-toggle="tab" data-bs-target="#Developers-tab-pane" type="button" role="tab" aria-controls="Developers-tab-pane" aria-selected="false">About the Developers</button>
-		</li>
-		<li class="nav-item" role="presentation">
-			<button class="nav-link" id="FAQ-tab" data-bs-toggle="tab" data-bs-target="#FAQ-tab-pane" type="button" role="tab" aria-controls="FAQ-tab-pane" aria-selected="false">FAQs</button>
-		</li>
-		<li class="nav-item" role="presentation">
-			<button class="nav-link" id="Contact-tab" data-bs-toggle="tab" data-bs-target="#Contact-tab-pane" type="button" role="tab" aria-controls="Contact-tab-pane" aria-selected="false">Contact Us</button>
-		</li>
-		</ul>
-		<div class="tab-content" id="myTabContent">
-		<div class="tab-pane fade show active" id="Vision-tab-pane" role="tabpanel" aria-labelledby="Vision-tab" tabindex="0">
-			<p>
+
+			<div class="tab">
+      		<button class="tablinks" onclick="openCity(event, 'mvm')" id="defaultOpen">Mandate, Vision, and Mission</button>
+      		<button class="tablinks" onclick="openCity(event, 'datap')">Data Privacy</button>
+      		<button class="tablinks" onclick="openCity(event, 'aboutdev')">About the Developers</button>
+      		<button class="tablinks" onclick="openCity(event, 'faqs')">FAQs</button>
+      		<button class="tablinks" onclick="openCity(event, 'contact')">Contact Us</button>
+    	</div>
+		
+			<div id="mvm" class="tabcontent" style="text-align:justify">
+				<p>
 				<b>Mandates (per EO 128)</b>
 				<br>
 				• Undertake science education and training; 
@@ -124,10 +105,11 @@ if (!isset($_SESSION['loggedin'])) {
 				<br><br>
 				<b>Organizational Chart</b>
 				<br>
+				</p>
 				<img src="images/OrgChart.png" class="rounded mx-auto d-block img-thumbnail">
 			</div>
 
-			<div class="tab-pane fade show" id="Privacy-tab-pane" role="tabpanel" aria-labelledby="Privacy-tab" tabindex="0">
+			<div id="datap" class="tabcontent" style="text-align: justify">
 					<p>
 					We, at the Department of Science and Technology-Science Education Institute, are committed to provide you with prompt and reliable services for the development of the country’s science and technology (S&T) human resources, the implementation of STEM education and innovation programs, and the promotion of S&T among the youth, pursuant to Executive Order No. 128 while implementing safeguards to protect your privacy and keep your personal data safe and secure in accordance with RA 10173 or the Data Privacy Act (DPA) of 2012.
 					<br><br>
@@ -156,15 +138,120 @@ if (!isset($_SESSION['loggedin'])) {
 					</p>
 			</div>
 			
-			<div class="tab-pane fade show" id="Developers-tab-pane" role="tabpanel" aria-labelledby="Developers-tab" tabindex="0">
-					
+			<div id="aboutdev" class="tabcontent" style="text-align: justify">
+					<p>
+						The developers of the website are sophomore college students of University of Santo Tomas Manila. They are currently
+						enrolled in the Information Technology program of the institution and developed this website in partial fulfillment of 
+						the course.
 			</div>
 
-			<div class="tab-pane fade show" id="FAQ-tab-pane" role="tabpanel" aria-labelledby="FAQ-tab" tabindex="0">
-			
+			<div id="faqs" class="tabcontent">
+				<h3>Frequently Asked Questions about the DOST-SEI S&T Undergraduate Scholarships</h3>
+				<br>
+					<h4>Nature and Duration</h4>
+						<h5>Question 1</h5>
+							<h6>
+								Will the DOST-SEI support my studies until I graduate from my chosen degree course?
+							</h6>
+							<p style="text-align: justify">
+								For as long as you comply with the scholarship policies and meet the grade requirements, 
+								the DOST-SEI will support your studies until the completion of your chosen degree course, 
+								depending on the period as stated in your approved Program of Study (POS); that is, full
+						 		four or five years for 4- or 5-year degree courses, respectively, except for degree courses 
+						 		whose support duration has been indicated in our announcement materials i.e, 4 yrs only for
+						  		Applied Mathematics major in Mathematical Finance, etc.
+							</p>
+						<h5>Question 2</h5>
+							<h6>
+								What if I decide to shift from my current degree course to another degree course, how will it
+							 	affect the duration of my scholarship?
+							</h6>
+							<p style="text-align: justify">
+								You may shift to another DOST-SEI approved course at the latest 2nd sem in your 2nd year. If you
+							 	shift from a 4-year course to a 5-year course, the duration of your scholarship will be adjusted
+							  	to 5 years inclusive of the period you spent in your first course; conversely, if you shift from
+							   	a 5-year course to a 4-year course, the duration will be adjusted to 4 years inclusive of the
+							    period spent in your first course. If you do not get to graduate at the end of the duration of
+								your scholarship but you continue to meet the scholarship requirements, you may still be considered
+								a DOST-SEI scholar but you are no longer entitled to any financial assistance. You are still
+							 	required though to submit report of grades for the extended period for record purposes.
+							</p>
+						<h5>Question 3</h5>
+							<h6>
+								I got accepted in a straight BS-MS degree course. Will the scholarship cover until the completion of my degree?
+							</h6>
+							<p style="text-align: justify">
+								The scholarship will only cover until the completion of your BS degree. You will have to shoulder the expenses
+								after your BS degree to complete your MS degree.
+							</p>
+							<br><br>
+					<h4>Study Placement</h4>
+						<h5>Question 1</h5>
+							<h6>
+								Is (name of school) a CHED Center of Excellence (COE) or a Center of Development (COD) or has at least Level III 
+								FAAP Accreditation for the (name of degree course)?
+							</h6>
+							<p style="text-align: justify">
+								Kindly click <a href="http://sei.dost.gov.ph/index.php/programs-and-projects/scholarships/undergraduate-scholarships#s-amp-t-undergraduate-scholarships"> 
+								HERE</a> for the lists of schools that satisfies our study placement requirements for the particular
+								S&T priority degree courses. We try to keep our database updated, but we recognize that sometimes,
+								that is not the case. If your dream school is not in our database, it is best that you ask the school
+								directly if it is recognized as CHED COE/COD or if it has at least Level III FAAP Accreditation for the
+								S&T degree course you want to pursue. If it has, request for a supporting document, then submit it
+								to us so we can update our database. Otherwise, you cannot study there if you wish to avail the
+								scholarship.
+							</p>
+						<h5>Question 2</h5>
+							<h6>
+								I am a DOST-SEI scholarship qualifier but was unable to secure enrollment in an approved degree course/university.
+								Can I still avail the scholarship?
+							</h6>
+							<p style="text-align: justify">
+								Unfortunately, you cannot avail the scholarship award if you fail to seek enrollment in an approved degree
+							 	course and university.
+							</p>
+							<br><br>
+					<h4>Scholarship Privileges</h4>
+						<h5>Question 1</h5>
+							<h6>
+								I will enroll in a private university wherein the tuition fee and other school fees ranges from P50,000 to P75,000
+							 	per academic year, how will SEI settle the payment for my tuition fee?
+							</h6>
+							<p style="text-align: justify">
+								SEI will provide you a Letter for Enrolment (LOE) every semester/term which you have to present to the Office 
+								of the University Registrar to automatically deduct from your tuition fee the amount of P40,000 per academic year.
+								Any exceeding amount shall be borne by your parents.
+							</p>
+						<h5>Question 2</h5>
+							<h6>
+								When will be the expected release of my financial assistance and what entitlements will it cover?
+							</h6>
+							<p style="text-align: justify">
+								It is released sometime in either the first month or the 2nd month of the semester at the latest. It covers stipend, book 
+								allowance for the First Semester, and uniform allowance.  that the next months' stipends may be released in 1 or 2
+								tranches within the semester.
+							</p>
+						<h5>Question 3</h5>
+							<h6>
+								If my POS requires me to enroll 6 units in the Summer/Mid-year Term but the school only offers 3 units, will I still receive
+								full financial assistance for that term?
+							</h6>
+							<p style="text-align: justify">
+								Yes, SEI will provide you with full financial assistance.
+							</p>
+						<h5>Question 4</h5>
+							<h6>
+								My POS does not require me to enroll during Summer/Mid-year Term; however, I would like to take advance subjects to make use
+								of such idle period. Will I be entitled to financial assistance?
+							</h6>
+							<p style="text-align: justify">
+								No, you will only receive financial assistance during Summer/Mid-year Term if it is prescribed in your approved POS. If you
+								wish to take advance subjects or re-enroll failed subjects, you shall not be entitled to financial assistance.
+							</p>
+						<h4>For more concerns, please refer <a href=https://www.sei.dost.gov.ph/images/stsd/ugradFAQ.pdf target="_blank">here</a> or refer to the contact tab</a></h4>
 			</div>
 
-			<div class="tab-pane fade show" id="Contact-tab-pane" role="tabpanel" aria-labelledby="Contact-tab" tabindex="0">
+			<div id="contact" class="tabcontent"><a id="contactlink"></a>
 					<p>
 						<b>Office of the Director</b>
 						<br>
@@ -194,7 +281,7 @@ if (!isset($_SESSION['loggedin'])) {
 						<br>
 						Tel No.:8330 8876 /  8330 8826
 						<br>
-						<b>For specific concern, please use the appropriate email address found in this link: <a href="https://sei.dost.gov.ph/index.php/transparency?id=375">Click here</a></b>
+						<b>For specific concern, please use the appropriate email address found in this link: <a href="https://sei.dost.gov.ph/index.php/transparency?id=375" target="_blank">Click here</a></b>
 						<br><br>
 						<b>Science and Technology Manpower Education Research and Promotions Division</b>
 						<br>
@@ -230,14 +317,88 @@ if (!isset($_SESSION['loggedin'])) {
 						<br><br>
 						<b>Social Media Pages</b>
 						<br>
-						<a href="https://sei.dost.gov.ph/">Official DOST-SEI Website</a>
+						<a href="https://sei.dost.gov.ph/" target="_blank">Official DOST-SEI Website</a>
 						<br>
-						<a href="https://www.facebook.com/DOST.SEI/">DOST-SEI Facebook Page</a>
+						<a href="https://www.facebook.com/DOST.SEI/" target="_blank">DOST-SEI Facebook Page</a>
 						<br>
-						<a href="https://www.facebook.com/people/DOST-Scholarship/100063939799753/">DOST-Scholarship Facebook Page</a>
+						<a href="https://www.facebook.com/people/DOST-Scholarship/100063939799753/" target="_blank">DOST-Scholarship Facebook Page</a>
 						<br>
 					</p>
 			</div>
 		</div>
+		<script>
+		  function openCity(evt, mvm) {
+          var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+                tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(mvm).style.display = "block";
+              evt.currentTarget.className += " active";
+            } 
+
+			function openCity(evt, datap) {
+          var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+                tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(datap).style.display = "block";
+              evt.currentTarget.className += " active";
+            } 
+            
+      function openCity(evt, aboutdev) {
+          var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+                tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(aboutdev).style.display = "block";
+              evt.currentTarget.className += " active";
+            }       
+
+			function openCity(evt, faqs) {
+          var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+                tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(faqs).style.display = "block";
+              evt.currentTarget.className += " active";
+            } 
+
+			function openCity(evt, contact) {
+          var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+                tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(contact).style.display = "block";
+              evt.currentTarget.className += " active";
+            } 
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+	  </script>
 	</body>
 </html>
