@@ -43,13 +43,13 @@ if (!isset($_SESSION['loggedin'])) {
 	<nav class="navtop">
 		<div>
 			<img src="images/logo.png" alt="logo">
-			<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-			<a href="home.php"><i class="fa-solid fa-house"></i>Home</a>
-			<a href="scholarship.php"><i class="fa-solid fa-graduation-cap"></i>Scholarship</a>
-			<a href="requirements.php"><i class="fa-brands fa-wpforms"></i>Requirements</a>
-			<a href="news.php"><i class="fa-solid fa-bullhorn"></i>News</a>
-			<a href="about.php"><i class="fa-solid fa-address-card"></i>About</a>
-			<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			<a href="profile.php">Profile</a>
+			<a href="home.php">Home</a>
+			<a href="scholarship.php">Scholarship</a>
+			<a href="requirements.php">Requirements</a>
+			<a href="news.php">News</a>
+			<a href="about.php">About</a>
+			<a href="logout.php">Logout</a>
 		</div>
 	</nav>
 	<div class="content">
