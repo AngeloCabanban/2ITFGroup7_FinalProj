@@ -64,14 +64,14 @@ require_once "CRUDConfig.php";
                                         $file_name = $_FILES['rf_pdf']['name'];
                                         $file_tmp = $_FILES['rf_pdf']['tmp_name'];
                                         // Move the uploaded pdf file into the pdf folder
-                                        move_uploaded_file($file_tmp, "./registration_form/" . $file_name);
+                                        move_uploaded_file($file_tmp, "./2ITFGroup7_FinalProj/registration_form/" . $file_name);
                                         // Insert the submitted data from the form into the table
-                                        $insertquery = "UPDATE registration_form SET email='$email', directory='/2ITFGroup7_FinalProj/registration_form/', rf_pdf='$file_name', status='PENDING' WHERE id='$id'";
+                                        $updatequery = "UPDATE registration_form SET email='$email', directory='/2ITFGroup7_FinalProj/registration_form/', rf_pdf='$file_name', status='PENDING' WHERE id='$id'";
                                         // Execute insert query
-                                        $iquery = mysqli_query($mysqli, $insertquery);
+                                        $uquery = mysqli_query($mysqli, $updatequery);
                                         // }
 
-                                        if ($iquery) {
+                                        if ($uquery) {
                                             header("Location: requirements.php");
                         ?>
 
