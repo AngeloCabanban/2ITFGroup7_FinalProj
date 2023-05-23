@@ -115,9 +115,7 @@ if (!isset($_SESSION['loggedin'])) {
 					RA 7687
 				</button>
 				<div id="text-area">
-					<br>
 					<h1 id="title" style="text-align: center">Types of Scholarship</h1>
-					<br>
 					<p id="desc">The S&T Undergraduate Scholarships Program aims to stimulate and entice talented Filipino youths to pursue lifetime productive careers in science and technology and ensure a steady, adequate supply of qualified S&T human resources which can steer the country towards national progress.</p>
 				</div>
 			</div>

@@ -82,7 +82,7 @@ require_once "CRUDConfig.php";
                                                         $file_name = $_FILES[$file]['name'];
                                                         $file_tmp = $_FILES[$file]['tmp_name'];
                                                         // Move the uploaded pdf file into the pdf folder
-                                                        move_uploaded_file($file_tmp, "./2ITFGroup7_FinalProj/$db/" . $file_name);
+                                                        move_uploaded_file($file_tmp, "./$db/" . $file_name);
                                                         // Insert the submitted data from the form into the table
                                                         $insertquery = "INSERT INTO $db(email, directory, $file, status) VALUES('$email', '/2ITFGroup7_FinalProj/$db/','$file_name', 'PENDING')";
                                                         // Execute insert query
