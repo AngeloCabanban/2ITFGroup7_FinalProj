@@ -1,8 +1,6 @@
 <?php
 require_once "CRUDConfig.php";
-// We need to use sessions, so you should always start sessions using the below code.
 session_start();
-// If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: indexLogin.html');
 	exit;
@@ -32,11 +30,6 @@ if (!isset($_SESSION['loggedin'])) {
 			width: 120px;
 		}
 	</style>
-	<!-- <script>
-		$(document).ready(function() {
-			$('[data-toggle="tooltip"]').tooltip();
-		});
-	</script> -->
 </head>
 
 <body class="loggedin">
@@ -142,10 +135,8 @@ if (!isset($_SESSION['loggedin'])) {
 											echo "</tbody>";
 											echo "</table>";
 										}
-										// Free result set
 										$result->free();
 									} else {
-										// echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
 									}
 								} else {
 									echo "Oops! Something went wrong. Please try again later.";
@@ -155,7 +146,6 @@ if (!isset($_SESSION['loggedin'])) {
 
 					<div name="trf_pdf">
 						<?php
-						// Attempt select query execution
 						$sql = "SELECT * FROM terminal_report_form WHERE email = '$_SESSION[name]'";
 						if ($result = $mysqli->query($sql)) {
 							if ($result->num_rows > 0) {
@@ -198,10 +188,8 @@ if (!isset($_SESSION['loggedin'])) {
 											echo "</tbody>";
 											echo "</table>";
 										}
-										// Free result set
 										$result->free();
 									} else {
-										// echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
 									}
 								} else {
 									echo "Oops! Something went wrong. Please try again later.";
@@ -211,7 +199,6 @@ if (!isset($_SESSION['loggedin'])) {
 
 					<div name="rf_pdf">
 						<?php
-						// Attempt select query execution
 						$sql = "SELECT * FROM registration_form WHERE email = '$_SESSION[name]'";
 						if ($result = $mysqli->query($sql)) {
 							if ($result->num_rows > 0) {
@@ -254,10 +241,8 @@ if (!isset($_SESSION['loggedin'])) {
 											echo "</tbody>";
 											echo "</table>";
 										}
-										// Free result set
 										$result->free();
 									} else {
-										// echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
 									}
 								} else {
 									echo "Oops! Something went wrong. Please try again later.";
@@ -267,7 +252,6 @@ if (!isset($_SESSION['loggedin'])) {
 
 					<div name="gl_pdf">
 						<?php
-						// Attempt select query execution
 						$sql = "SELECT * FROM gratitude_letter WHERE email = '$_SESSION[name]'";
 						if ($result = $mysqli->query($sql)) {
 							if ($result->num_rows > 0) {
@@ -310,15 +294,12 @@ if (!isset($_SESSION['loggedin'])) {
 											echo "</tbody>";
 											echo "</table>";
 										}
-										// Free result set
 										$result->free();
 									} else {
-										// echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
 									}
 								} else {
 									echo "Oops! Something went wrong. Please try again later.";
 								}
-								// Close connection
 								$mysqli->close();
 								?>
 					</div>

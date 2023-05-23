@@ -1,7 +1,5 @@
 <?php
-// We need to use sessions, so you should always start sessions using the below code.
 session_start();
-// If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: indexLogin.html');
 	exit;
@@ -810,7 +808,6 @@ if (!isset($_SESSION['loggedin'])) {
               evt.currentTarget.className += " active";
             } 
 
-        // Get the element with id="defaultOpen" and click on it
         document.getElementById("default").click();
 	    </script>
     </div>

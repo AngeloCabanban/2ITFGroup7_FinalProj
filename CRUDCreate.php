@@ -48,10 +48,9 @@ require_once "CRUDConfig.php";
                             $email = $_POST['emailreq'];
 
                             if ($stmt = $mysqli->prepare('SELECT id, password FROM accounts WHERE email = ?')) {
-                                // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
                                 $stmt->bind_param('s', $_POST['emailreq']);
                                 $stmt->execute();
-                                $stmt->store_result();  // Store the result so we can check if the account exists in the database.
+                                $stmt->store_result();
 
                                 if ($stmt->num_rows > 0) {
 
@@ -81,11 +80,8 @@ require_once "CRUDConfig.php";
 
                                                         $file_name = $_FILES[$file]['name'];
                                                         $file_tmp = $_FILES[$file]['tmp_name'];
-                                                        // Move the uploaded pdf file into the pdf folder
                                                         move_uploaded_file($file_tmp, "./$db/" . $file_name);
-                                                        // Insert the submitted data from the form into the table
                                                         $insertquery = "INSERT INTO $db(email, directory, $file, status) VALUES('$email', '/2ITFGroup7_FinalProj/$db/','$file_name', 'PENDING')";
-                                                        // Execute insert query
                                                         $iquery = mysqli_query($mysqli, $insertquery);
                                                     }
 
@@ -156,13 +152,13 @@ require_once "CRUDConfig.php";
                         <?php
                                 }
                             }
-                        } // end if
+                        }
                         ?>
 
                         <div class="form-input py-2">
                             <div class="form-group">
                                 <strong>DOST-SEI Scholar Email Address</strong>
-                                <input type="text" name="emailreq" class="form-control" placeholder="Email"  required>
+                                <input type="text" name="emailreq" class="form-control" placeholder="Email" required>
                             </div>
                             <strong>Upload Transcript of Records</strong>
                             <div class="form-group">
@@ -189,7 +185,7 @@ require_once "CRUDConfig.php";
                             </div>
                         </div>
                         <?php
-                        // Close connection
+
                         $mysqli->close();
                         ?>
 
@@ -203,13 +199,6 @@ require_once "CRUDConfig.php";
             </div>
         </div>
     </div>
-
-    <!-- 
-SQL Code - Reset Auto-Increment:
-SET @autoid :=0;
-UPDATE terminal_report_form set id = @autoid := (@autoid + 1);
-ALTER TABLE terminal_report_form AUTO_INCREMENT = 1;  
--->
 
 </body>
 

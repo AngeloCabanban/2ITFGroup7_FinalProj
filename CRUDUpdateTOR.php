@@ -48,10 +48,9 @@ require_once "CRUDConfig.php";
                             $email = $_POST['emailreq'];
 
                             if ($stmt = $mysqli->prepare('SELECT id, password FROM accounts WHERE email = ?')) {
-                                // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
                                 $stmt->bind_param('s', $_POST['emailreq']);
                                 $stmt->execute();
-                                $stmt->store_result();  // Store the result so we can check if the account exists in the database.
+                                $stmt->store_result();
 
                                 if ($stmt->num_rows > 0) {
 
@@ -63,13 +62,9 @@ require_once "CRUDConfig.php";
 
                                         $file_name = $_FILES['tor_pdf']['name'];
                                         $file_tmp = $_FILES['tor_pdf']['tmp_name'];
-                                        // Move the uploaded pdf file into the pdf folder
                                         move_uploaded_file($file_tmp, "./2ITFGroup7_FinalProj/transcript_of_records/" . $file_name);
-                                        // Insert the submitted data from the form into the table
                                         $updatequery = "UPDATE transcript_of_records SET email='$email', directory='/2ITFGroup7_FinalProj/transcript_of_records/', tor_pdf='$file_name', status='PENDING' WHERE id='$id'";
-                                        // Execute insert query
                                         $uquery = mysqli_query($mysqli, $updatequery);
-                                        // }
 
                                         if ($uquery) {
                                             header("Location: requirements.php");
@@ -108,7 +103,7 @@ require_once "CRUDConfig.php";
                         <?php
                                 }
                             }
-                        } // end if
+                        }
                         ?>
 
                         <div class="form-input py-2">
@@ -126,8 +121,6 @@ require_once "CRUDConfig.php";
                             </div>
                         </div>
                         <?php
-                        // Close connection
-                        // $stmt->close();
                         $mysqli->close();
                         ?>
 
@@ -138,13 +131,6 @@ require_once "CRUDConfig.php";
             </div>
         </div>
     </div>
-
-    <!-- 
-SQL Code - Reset Auto-Increment:
-SET @autoid :=0;
-UPDATE terminal_report_form set id = @autoid := (@autoid + 1);
-ALTER TABLE terminal_report_form AUTO_INCREMENT = 1;  
--->
 
 </body>
 
