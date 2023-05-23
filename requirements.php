@@ -54,13 +54,13 @@ if (!isset($_SESSION['loggedin'])) {
 	</nav>
 	<div class="content">
 		<h2>Requirements Page</h2>
-		<p>
-			<br>- Forms
-			<br>- Requires Database Connection*
-			<br>- CRUD Integration
-			<br>
-			<br>*Create corresponding Database (Document steps of Database Creation, including Structure, etc.)
-		</p>
+		<div>
+			<h3>Documents to be Submitted:</h3>
+			<br>1. Transcript of Records
+			<br>2. Terminal Report Form
+			<br>3. CRUD Registration Form
+			<br>4. Gratitude Letter to the Foundation
+		</div>
 	</div>
 
 	<div class="wrapper">
@@ -322,6 +322,7 @@ if (!isset($_SESSION['loggedin'])) {
 								$mysqli->close();
 								?>
 					</div>
+					<br><br><br>
 
 				</div>
 			</div>
