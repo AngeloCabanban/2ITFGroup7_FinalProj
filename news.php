@@ -22,7 +22,7 @@ if (!isset($_SESSION['loggedin'])) {
 	</head>
 	<body class="loggedin">
 
-		<nav class="navtop">
+  <nav class="navtop">
 			<div>
         <img src="images/logo.png" alt="logo">
 				<a href="profile.php">Profile</a>

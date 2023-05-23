@@ -87,6 +87,7 @@ body {
 	text-decoration: none;
 	color: #c1c4c8;
 	font-weight: bold;
+    z-index: 10;
 }
 .navtop div a i {
 	padding: 2px 8px 0 0;
