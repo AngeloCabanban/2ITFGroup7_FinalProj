@@ -18,80 +18,6 @@ if (!isset($_SESSION['loggedin'])) {
     <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
     <script src="bootstrap/js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-	<script>
-		 function openCity(evt, programs) {
-          var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-              }
-                tablinks = document.getElementsByClassName("tablinks");
-              for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-              }
-              document.getElementById(programs).style.display = "block";
-              evt.currentTarget.className += " active";
-            } 
-
-			function openCity(evt, schopriv) {
-          var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-              }
-                tablinks = document.getElementsByClassName("tablinks");
-              for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-              }
-              document.getElementById(schopriv).style.display = "block";
-              evt.currentTarget.className += " active";
-            } 
-            
-      function openCity(evt, qualifications) {
-          var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-              }
-                tablinks = document.getElementsByClassName("tablinks");
-              for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-              }
-              document.getElementById(qualifications).style.display = "block";
-              evt.currentTarget.className += " active";
-            }       
-
-			function openCity(evt, appreq) {
-          var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-              }
-                tablinks = document.getElementsByClassName("tablinks");
-              for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-              }
-              document.getElementById(appreq).style.display = "block";
-              evt.currentTarget.className += " active";
-            } 
-
-			function openCity(evt, appper) {
-          var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-              }
-                tablinks = document.getElementsByClassName("tablinks");
-              for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-              }
-              document.getElementById(appper).style.display = "block";
-              evt.currentTarget.className += " active";
-            } 
-
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-	</script>
 	<style>
         table {
           border-collapse: collapse;
@@ -126,8 +52,8 @@ if (!isset($_SESSION['loggedin'])) {
 		</nav>
 		<div class="content">
 			<h2>Scholarship Page</h2>
-				<div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'programs')">Priority S&T Programs and Study Placement</button>
+			<div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'programs')" id="default">Priority S&T Programs and Study Placement</button>
       <button class="tablinks" onclick="openCity(event, 'schopriv')">Scholarship Privileges</button>
       <button class="tablinks" onclick="openCity(event, 'qualifications')">Qualifications</button>
       <button class="tablinks" onclick="openCity(event, 'appreq')">Application Requirements</button>
@@ -808,6 +734,81 @@ if (!isset($_SESSION['loggedin'])) {
       </table>
       <br><br>
       <p style="text-align: justify">If and when the COVID 19 alert level will be heightened at around the time of the examination per advisory from Inter-Agency Task Force for the Management of Emerging Infectious Diseases, the conduct of the pen and paper examination may be cancelled. In this event, proper communication will be sent to the Applicant's registered email address.</p>
+      
+      <script>
+		  function openCity(evt, programs) {
+          var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+                tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(programs).style.display = "block";
+              evt.currentTarget.className += " active";
+            } 
+
+			function openCity(evt, schopriv) {
+          var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+                tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(schopriv).style.display = "block";
+              evt.currentTarget.className += " active";
+            } 
+            
+      function openCity(evt, qualifications) {
+          var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+                tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(qualifications).style.display = "block";
+              evt.currentTarget.className += " active";
+            }       
+
+			function openCity(evt, appreq) {
+          var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+                tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(appreq).style.display = "block";
+              evt.currentTarget.className += " active";
+            } 
+
+			function openCity(evt, appper) {
+          var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+                tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(appper).style.display = "block";
+              evt.currentTarget.className += " active";
+            } 
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("default").click();
+	  </script>
     </div>
 	</body>
 </html>
