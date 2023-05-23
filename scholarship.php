@@ -46,6 +46,20 @@ if (!isset($_SESSION['loggedin'])) {
               document.getElementById(schopriv).style.display = "block";
               evt.currentTarget.className += " active";
             } 
+            
+      function openCity(evt, qualifications) {
+          var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+                tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(qualifications).style.display = "block";
+              evt.currentTarget.className += " active";
+            }       
 
 			function openCity(evt, appreq) {
           var i, tabcontent, tablinks;
@@ -115,6 +129,7 @@ if (!isset($_SESSION['loggedin'])) {
 				<div class="tab">
       <button class="tablinks" onclick="openCity(event, 'programs')">Priority S&T Programs and Study Placement</button>
       <button class="tablinks" onclick="openCity(event, 'schopriv')">Scholarship Privileges</button>
+      <button class="tablinks" onclick="openCity(event, 'qualifications')">Qualifications</button>
       <button class="tablinks" onclick="openCity(event, 'appreq')">Application Requirements</button>
       <button class="tablinks" onclick="openCity(event, 'appper')">Application Period</button>
     </div>
