@@ -64,14 +64,14 @@ require_once "CRUDConfig.php";
                                         $file_name = $_FILES['gl_pdf']['name'];
                                         $file_tmp = $_FILES['gl_pdf']['tmp_name'];
                                         // Move the uploaded pdf file into the pdf folder
-                                        move_uploaded_file($file_tmp, "./gratitude_letter/" . $file_name);
+                                        move_uploaded_file($file_tmp, "./2ITFGroup7_FinalProj/gratitude_letter/" . $file_name);
                                         // Insert the submitted data from the form into the table
-                                        $insertquery = "UPDATE gratitude_letter SET email='$email', directory='/2ITFGroup7_FinalProj/gratitude_letter/', gl_pdf='$file_name', status='PENDING' WHERE id='$id'";
+                                        $updatequery = "UPDATE gratitude_letter SET email='$email', directory='/2ITFGroup7_FinalProj/gratitude_letter/', gl_pdf='$file_name', status='PENDING' WHERE id='$id'";
                                         // Execute insert query
-                                        $iquery = mysqli_query($mysqli, $insertquery);
+                                        $uquery = mysqli_query($mysqli, $updatequery);
                                         // }
 
-                                        if ($iquery) {
+                                        if ($uquery) {
                                             header("Location: requirements.php");
                         ?>
 

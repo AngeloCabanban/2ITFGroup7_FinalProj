@@ -64,14 +64,14 @@ require_once "CRUDConfig.php";
                                         $file_name = $_FILES['tor_pdf']['name'];
                                         $file_tmp = $_FILES['tor_pdf']['tmp_name'];
                                         // Move the uploaded pdf file into the pdf folder
-                                        move_uploaded_file($file_tmp, "./transcript_of_records/" . $file_name);
+                                        move_uploaded_file($file_tmp, "./2ITFGroup7_FinalProj/transcript_of_records/" . $file_name);
                                         // Insert the submitted data from the form into the table
-                                        $insertquery = "UPDATE transcript_of_records SET email='$email', directory='/2ITFGroup7_FinalProj/transcript_of_records/', tor_pdf='$file_name', status='PENDING' WHERE id='$id'";
+                                        $updatequery = "UPDATE transcript_of_records SET email='$email', directory='/2ITFGroup7_FinalProj/transcript_of_records/', tor_pdf='$file_name', status='PENDING' WHERE id='$id'";
                                         // Execute insert query
-                                        $iquery = mysqli_query($mysqli, $insertquery);
+                                        $uquery = mysqli_query($mysqli, $updatequery);
                                         // }
 
-                                        if ($iquery) {
+                                        if ($uquery) {
                                             header("Location: requirements.php");
                         ?>
 
