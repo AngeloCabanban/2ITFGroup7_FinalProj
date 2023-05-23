@@ -39,8 +39,10 @@ if (!isset($_SESSION['loggedin'])) {
 			<h2>Recent News and Current Events</h2>
 
     <div class="container" id="news" style="padding-top: 230px; padding-bottom: 1520px">
+      
       <div class="row" style="padding-top: 1283px">
         <div class="col-4">
+
           <div class="fancy_card" id="f1"><a href="https://www.sei.dost.gov.ph/index.php/news-archive/425-stem-teach-learning-the-basics-of-geogebra-as-a-tool-in-teaching-mathematics" target="_blank">
             <img src="https://www.sei.dost.gov.ph/images/news/n458b.png" class="card_image">
             <div class="card_text">  
@@ -54,10 +56,10 @@ if (!isset($_SESSION['loggedin'])) {
                 <div class="reading_time">
                   27 April 2023        
                 </div>
-            </div>  
-      </a></div>
+          </div>  
+    </a></div>
 
-          <div style="padding-top: 5px">
+        <div style="padding-top: 5px">
           <div class="fancy_card" id="f2"><a href="https://www.sei.dost.gov.ph/index.php/news-archive/422-dost-sei-launches-work-immersion-partnership-with-upper-bicutan-national-high-school" target="_blank">
             <img src="https://www.sei.dost.gov.ph/images/news/n455a.png" class="card_image">
             <div class="card_text">  
@@ -72,10 +74,10 @@ if (!isset($_SESSION['loggedin'])) {
                   20 April 2023        
                 </div>
             </div>
-</div>
-      </a></div>
+          </div>
+    </a></div>
         
-          <div style="padding-top: 5px">
+        <div style="padding-top: 5px">
           <div class="fancy_card" id="f3"><a href="https://www.sei.dost.gov.ph/index.php/news-archive/418-dost-sei-mobile-lab-makes-science-lessons-exciting-for-bulacan-students" target="_blank">
             <img src="https://www.sei.dost.gov.ph/images/news/n452.png" class="card_image">
             <div class="card_text">  
@@ -91,12 +93,14 @@ if (!isset($_SESSION['loggedin'])) {
                 </div>
             </div>
       </a></div>
-          </div>
         </div>
       </div>
+    </div>
       
+    
       <div class="row" style="padding-top: 1370px">
         <div class="col-4">
+
           <div class="fancy_card" id="f4"><a href="https://www.sei.dost.gov.ph/index.php/news-archive/424-films-on-nationalism-community-development-highlighted-in-dost-sei-s-video-making-competition" target="_blank">
             <img src="https://www.sei.dost.gov.ph/images/news/n457.png" class="card_image">
             <div class="card_text">  
@@ -113,7 +117,8 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
       </a></div>
 
-          <div style="padding-top: 37px">
+        <div style="padding-top: 37px">
+          
           <div class="fancy_card" id="f5"><a href="https://www.sei.dost.gov.ph/index.php/news-archive/421-young-filipino-girls-take-the-spotlight-on-the-stage-of-robotics" target="_blank">
             <img src="https://www.sei.dost.gov.ph/images/news/n454b.jpeg" class="card_image">
             <div class="card_text">  
@@ -129,9 +134,10 @@ if (!isset($_SESSION['loggedin'])) {
                 </div>
             </div>
       </a></div>
-          </div>
+        </div>
 
-          <div style="padding-top: 12px; padding-bottom: 77px">
+        <div style="padding-top: 12px; padding-bottom: 77px">
+
           <div class="fancy_card" id="f6"><a href="https://www.sei.dost.gov.ph/index.php/news-archive/417-honda-c-e-publishing-gbf-invest-in-young-filipino-innovators-through-dost-sei-s-6th-imake-wemake" target="_blank">
             <img src="https://www.sei.dost.gov.ph/images/news/n451a.png" class="card_image">
             <div class="card_text">  
@@ -147,9 +153,9 @@ if (!isset($_SESSION['loggedin'])) {
                 </div>
             </div>
       </a></div>
-          </div>
         </div>
       </div>
+    </div>
 
       <div class="row" style="padding-top: 1247px">
         <div class="col-4">

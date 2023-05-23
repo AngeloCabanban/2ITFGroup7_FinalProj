@@ -11,14 +11,16 @@ if (!isset($_SESSION['loggedin'])) {
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Scholarship Page</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
-    <script src="bootstrap/js/popper.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-	<style>
+		  <title>
+        Scholarship Page
+      </title>
+		  <link href="style.css" rel="stylesheet" type="text/css">
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+		  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+      <script src="bootstrap/js/popper.min.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+	    <style>
         table {
           border-collapse: collapse;
         }
@@ -35,12 +37,12 @@ if (!isset($_SESSION['loggedin'])) {
         td{
           border: none;
         }
-        </style>
+      </style>
 	</head>
 	<body class="loggedin">
 		<nav class="navtop">
 			<div>
-                <img src="images/logo.png" alt="logo">
+        <img src="images/logo.png" alt="logo">
 				<a href="profile.php">Profile</a>
 				<a href="home.php">Home</a>
 				<a href="scholarship.php">Scholarship</a>
@@ -53,386 +55,388 @@ if (!isset($_SESSION['loggedin'])) {
 		<div class="content">
 			<h2>Scholarship Page</h2>
 			<div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'programs')" id="default">Priority S&T Programs and Study Placement</button>
-      <button class="tablinks" onclick="openCity(event, 'schopriv')">Scholarship Privileges</button>
-      <button class="tablinks" onclick="openCity(event, 'qualifications')">Qualifications</button>
-      <button class="tablinks" onclick="openCity(event, 'appreq')">Application Requirements</button>
-      <button class="tablinks" onclick="openCity(event, 'appper')">Application Period</button>
-    </div>
+        <button class="tablinks" onclick="openCity(event, 'programs')" id="default">Priority S&T Programs and Study Placement</button>
+        <button class="tablinks" onclick="openCity(event, 'schopriv')">Scholarship Privileges</button>
+        <button class="tablinks" onclick="openCity(event, 'qualifications')">Qualifications</button>
+        <button class="tablinks" onclick="openCity(event, 'appreq')">Application Requirements</button>
+        <button class="tablinks" onclick="openCity(event, 'appper')">Application Period</button>
+      </div>
     
-    <div id="programs" class="tabcontent">
-      <h3>Programs Covered by the DOST-SEI Undergraduate Scholarships</h3>
-      <p>
-        <ul>
-          <li>
-            Bachelor in Mathematics Education
-          </li>
-          <li>
-            Bachelor in Technology and Livelihood Education with Specialization in Information and Communications
-          </li>
-          <li>
-            Bachelor of Library and Information Science
-          </li>
-          <li>
-            BS Aeronautical Engineering
-          </li>
-          <li>
-            BS Aerospace Engineering
-          </li>
-          <li>
-            BS Agribusiness
-          </li>
-          <li>
-            BS Agribusiness Management
-          </li>
-          <li>
-            BS Agribusiness Management and Entrepreneurship
-          </li>
-          <li>
-            BS Agricultural and Biosystems Engineering
-          </li>
-          <li>
-            BS Agricultural Biotechnology<sup>1</sup>
-          </li>
-          <li>
-            BS Agricultural Chemistry
-          </li>
-          <li>
-            BS Agricultural Economics
-          </li>
-          <li>
-            BS Agricultural Engineering
-          </li>
-          <li>
-            BS Agricultural Technology
-          </li>
-          <li>
-            BS Agriculture
-          </li>
-          <li>
-            BS Animal Husbandry
-          </li>
-          <li>
-            BS Animal Science
-          </li>
-          <li>
-            BS Applied Mathematics
-          </li>
-          <li>
-            BS Applied Mathematics major in Mathematical Finance<sup>2</sup>
-          </li>
-          <li>
-            BS Applied Physics
-          </li>
-          <li>
-            BS Applied Physics with Applied Computer System
-          </li>
-          <li>
-            BS Applied Physics with Materials Science and Engineering<sup>2</sup>
-          </li>
-          <li>
-            BS Applied Statistics
-          </li>
-          <li>
-            BS Architecture
-          </li>
-          <li>
-            BS Astronomy
-          </li>
-          <li>
-            BS Astronomy Technology
-          </li>
-          <li>
-            BS Basic Medical Sciences
-          </li>
-          <li>
-            BS Biochemistry
-          </li>
-          <li>
-            BS Biology
-          </li>
-          <li>
-            BS Biology for Teachers
-          </li>
-          <li>
-            BS Biotechnology
-          </li>
-          <li>
-            BS Ceramics Engineering
-          </li>
-          <li>
-            BS Chemical Engineering
-          </li>
-          <li>
-            BS Chemistry
-          </li>
-          <li>
-            BS Chemistry Major in Business<sup>3</sup>
-          </li>
-          <li>
-            BS Chemistry for Teachers
-          </li>
-          <li>
-            BS Chemistry with Applied Computer Systems
-          </li>
-          <li>
-            BS Chemistry with Materials Science and Engineering<sup>2</sup>
-          </li>
-          <li>
-            BS Civil Engineering
-          </li>
-          <li>
-            BS Clothing Technology
-          </li>
-          <li>
-            BS Community Nutrition
-          </li>
-          <li>
-            BS Computer Engineering
-          </li>
-          <li>
-            BS Computer Science
-          </li>
-          <li>
-            BS Electrical Engineering
-          </li>
-          <li>
-            BS Electronics and Communications Engineering
-          </li>
-          <li>
-            BS Environmental Engineering
-          </li>
-          <li>
-            BS Electronics Engineering
-          </li>
-          <li>
-            BS Environmental Science
-          </li>
-          <li>
-            BS Fine Arts Major in Industrial Design
-          </li>
-          <li>
-            BS Fisheries
-          </li>
-          <li>
-            BS Food Science and Technology
-          </li>
-          <li>
-            BS Food Technology
-          </li>
-          <li>
-            BS Forestry
-          </li>
-          <li>
-            BS Geodetic Engineering
-          </li>
-          <li>
-            BS Geography
-          </li>
-          <li>
-            BS Geology
-          </li>
-          <li>
-            BS Geothermal Engineering
-          </li>
-          <li>
-            BS Health Science
-          </li>
-          <li>
-            BS Human Biology
-          </li>
-          <li>
-            BS Industrial Design
-          </li>
-          <li>
-            BS Industrial Engineering
-          </li>
-          <li>
-            BS Industrial Management Engineering-Information Technology<sup>3</sup>
-          </li>
-          <li>
-            BS Industrial Pharmacy
-          </li>
-          <li>
-            BS Information and Communications Technology
-          </li>
-          <li>
-            BS Information System
-          </li>
-          <li>
-            BS Information Technology
-          </li>
-          <li>
-            BS Information Technology Systems
-          </li>
-          <li>
-            BS Instrumentation and Control Engineering
-          </li>
-          <li>
-            BS Life Sciences
-          </li>
-          <li>
-            BS Management Information Systems<sup>2</sup>
-          </li>
-          <li>
-            BS Manufacturing Engineering
-          </li>
-          <li>
-            BS Manufacturing Engineering-Management-Biomedical Engineering<sup>3</sup>
-          </li>
-          <li>
-            BS Manufacturing Engineering-Management-Mechatronics and Robotics<sup>3</sup>
-          </li>
-          <li>
-            BS Marine Biology
-          </li>
-          <li>
-            BS Marine Science
-          </li>
-          <li>
-            BS Materials Engineering
-          </li>
-          <li>
-            BS Mathematics
-          </li>
-          <li>
-            BS Mathematics and Science Teaching
-          </li>
-          <li>
-            BS BS Mathematics for Teachers
-          </li>
-          <li>
-            BS Mechanical Engineering
-          </li>
-          <li>
-            BS Mechatronics Engineering
-          </li>
-          <li>
-            BS Medical Laboratory Science
-          </li>
-          <li>
-            BS Medical Technology
-          </li>
-          <li>
-            BS Metallurgical Engineering
-          </li>
-          <li>
-            BS Meteorology
-          </li>
-          <li>
-            BS Microbiology
-          </li>
-          <li>
-            BS Mining Engineering
-          </li>
-          <li>
-            BS Molecular Biology and Biotechnology
-          </li>
-          <li>
-            BS Nutrition
-          </li>
-          <li>
-            BS Nutrition and Dietetics
-          </li>
-          <li>
-            BS Packaging Engineering
-          </li>
-          <li>
-            BS Petroleum Engineering
-          </li>
-          <li>
-            BS Pharmaceutical Sciences
-          </li>
-          <li>
-            BS Pharmacy (4-year program)
-          </li>
-          <li>
-            BS Pharmacy major in Clinical Pharmacy (5-year program)
-          </li>
-          <li>
-            BS Physics
-          </li>
-          <li>
-            BS Physics for Teachers
-          </li>
-          <li>
-            BS Psychology
-          </li>
-          <li>
-            BS Public Health
-          </li>
-          <li>
-            BS Speech Pathology
-          </li>
-          <li>
-            BS Statistics
-          </li>
-          <li>
-            BSE Biological Sciences
-          </li>
-          <li>
-            BSE Biology
-          </li>
-          <li>
-            BSE Biology-Chemistry
-          </li>
-          <li>
-            BSE Chemistry
-          </li>
-          <li>
-            BSE General Sciences
-          </li>
-          <li>
-            BSE Mathematics
-          </li>
-          <li>
-            BSE Physical Sciences
-          </li>
-          <li>
-            BSE Physics
-          </li>
-          <li>
-            BSE Physics-Chemistry
-          </li>
-          <li>
-            BSE Physics-Mathematics
-          </li>
-          <li>
-            BSE Science
-          </li>
-          <li>
-            Doctor of Veterinary Medicine
-          </li>
-        </ul>
-      </p>
+      <div id="programs" class="tabcontent">
+        <h3>Programs Covered by the DOST-SEI Undergraduate Scholarships</h3>
+          <p>
+            <ul>
+              <li>
+                Bachelor in Mathematics Education
+              </li>
+              <li>
+                Bachelor in Technology and Livelihood Education with Specialization in Information and Communications
+              </li>
+              <li>
+                Bachelor of Library and Information Science
+              </li>
+              <li>
+                BS Aeronautical Engineering
+              </li>
+              <li>
+                BS Aerospace Engineering
+              </li>
+              <li>
+                BS Agribusiness
+              </li>
+              <li>
+                BS Agribusiness Management
+              </li>
+              <li>
+                BS Agribusiness Management and Entrepreneurship
+              </li>
+              <li>
+                BS Agricultural and Biosystems Engineering
+              </li>
+              <li>
+                BS Agricultural Biotechnology<sup>1</sup>
+              </li>
+              <li>
+                BS Agricultural Chemistry
+              </li>
+              <li>
+                BS Agricultural Economics
+              </li>
+              <li>
+                BS Agricultural Engineering
+              </li>
+              <li>
+                BS Agricultural Technology
+              </li>
+              <li>
+                BS Agriculture
+              </li>
+              <li>
+                BS Animal Husbandry
+              </li>
+              <li>
+                BS Animal Science
+              </li>
+              <li>
+                BS Applied Mathematics
+              </li>
+              <li>
+                BS Applied Mathematics major in Mathematical Finance<sup>2</sup>
+              </li>
+              <li>
+                BS Applied Physics
+              </li>
+              <li>
+                BS Applied Physics with Applied Computer System
+              </li>
+              <li>
+                BS Applied Physics with Materials Science and Engineering<sup>2</sup>
+              </li>
+              <li>
+                BS Applied Statistics
+              </li>
+              <li>
+                BS Architecture
+              </li>
+              <li>
+                BS Astronomy
+              </li>
+              <li>
+                BS Astronomy Technology
+              </li>
+              <li>
+                BS Basic Medical Sciences
+              </li>
+              <li>
+                BS Biochemistry
+              </li>
+              <li>
+                BS Biology
+              </li>
+              <li>
+                BS Biology for Teachers
+              </li>
+              <li>
+                BS Biotechnology
+              </li>
+              <li>
+                BS Ceramics Engineering
+              </li>
+              <li>
+                BS Chemical Engineering
+              </li>
+              <li>
+                BS Chemistry
+              </li>
+              <li>
+                BS Chemistry Major in Business<sup>3</sup>
+              </li>
+              <li>
+                BS Chemistry for Teachers
+              </li>
+              <li>
+                BS Chemistry with Applied Computer Systems
+              </li>
+              <li>
+                BS Chemistry with Materials Science and Engineering<sup>2</sup>
+              </li>
+              <li>
+                BS Civil Engineering
+              </li>
+              <li>
+                BS Clothing Technology
+              </li>
+              <li>
+                BS Community Nutrition
+              </li>
+              <li>
+                BS Computer Engineering
+              </li>
+              <li>
+                BS Computer Science
+              </li>
+              <li>
+                BS Electrical Engineering
+              </li>
+              <li>
+                BS Electronics and Communications Engineering
+              </li>
+              <li>
+                BS Environmental Engineering
+              </li>
+              <li>
+                BS Electronics Engineering
+              </li>
+              <li>
+                BS Environmental Science
+              </li>
+              <li>
+                BS Fine Arts Major in Industrial Design
+              </li>
+              <li>
+                BS Fisheries
+              </li>
+              <li>
+                BS Food Science and Technology
+              </li>
+              <li>
+                BS Food Technology
+              </li>
+              <li>
+                BS Forestry
+              </li>
+              <li>
+                BS Geodetic Engineering
+              </li>
+              <li>
+                BS Geography
+              </li>
+              <li>
+                BS Geology
+              </li>
+              <li>
+                BS Geothermal Engineering
+              </li>
+              <li>
+                BS Health Science
+              </li>
+              <li>
+                BS Human Biology
+              </li>
+              <li>
+                BS Industrial Design
+              </li>
+              <li>
+                BS Industrial Engineering
+              </li>
+              <li>
+                BS Industrial Management Engineering-Information Technology<sup>3</sup>
+              </li>
+              <li>
+                BS Industrial Pharmacy
+              </li>
+              <li>
+                BS Information and Communications Technology
+              </li>
+              <li>
+                BS Information System
+              </li>
+              <li>
+                BS Information Technology
+              </li>
+              <li>
+                BS Information Technology Systems
+              </li>
+              <li>
+                BS Instrumentation and Control Engineering
+              </li>
+              <li>
+                BS Life Sciences
+              </li>
+              <li>
+                BS Management Information Systems<sup>2</sup>
+              </li>
+              <li>
+                BS Manufacturing Engineering
+              </li>
+              <li>
+                BS Manufacturing Engineering-Management-Biomedical Engineering<sup>3</sup>
+              </li>
+              <li>
+                BS Manufacturing Engineering-Management-Mechatronics and Robotics<sup>3</sup>
+              </li>
+              <li>
+                BS Marine Biology
+              </li>
+              <li>
+                BS Marine Science
+              </li>
+              <li>
+                BS Materials Engineering
+              </li>
+              <li>
+                BS Mathematics
+              </li>
+              <li>
+                BS Mathematics and Science Teaching
+              </li>
+              <li>
+                BS BS Mathematics for Teachers
+              </li>
+              <li>
+                BS Mechanical Engineering
+              </li>
+              <li>
+                BS Mechatronics Engineering
+              </li>
+              <li>
+                BS Medical Laboratory Science
+              </li>
+              <li>
+                BS Medical Technology
+              </li>
+              <li>
+                BS Metallurgical Engineering
+              </li>
+              <li>
+                BS Meteorology
+              </li>
+              <li>
+                BS Microbiology
+              </li>
+              <li>
+                BS Mining Engineering
+              </li>
+              <li>
+                BS Molecular Biology and Biotechnology
+              </li>
+              <li>
+                BS Nutrition
+              </li>
+              <li>
+                BS Nutrition and Dietetics
+              </li>
+              <li>
+                BS Packaging Engineering
+              </li>
+              <li>
+                BS Petroleum Engineering
+              </li>
+              <li>
+                BS Pharmaceutical Sciences
+              </li>
+              <li>
+                BS Pharmacy (4-year program)
+              </li>
+              <li>
+                BS Pharmacy major in Clinical Pharmacy (5-year program)
+              </li>
+              <li>
+                BS Physics
+              </li>
+              <li>
+                BS Physics for Teachers
+              </li>
+              <li>
+                BS Psychology
+              </li>
+              <li>
+                BS Public Health
+              </li>
+              <li>
+                BS Speech Pathology
+              </li>
+              <li>
+                BS Statistics
+              </li>
+              <li>
+                BSE Biological Sciences
+              </li>
+              <li>
+                BSE Biology
+              </li>
+              <li>
+                BSE Biology-Chemistry
+              </li>
+              <li>
+                BSE Chemistry
+              </li>
+              <li>
+                BSE General Sciences
+              </li>
+              <li>
+                BSE Mathematics
+              </li>
+              <li>
+                BSE Physical Sciences
+              </li>
+              <li>
+                BSE Physics
+              </li>
+              <li>
+                BSE Physics-Chemistry
+              </li>
+              <li>
+                BSE Physics-Mathematics
+              </li>
+              <li>
+                BSE Science
+              </li>
+              <li>
+                Doctor of Veterinary Medicine
+              </li>
+            </ul>
+          </p>
 
-      <section id="cardSection" style="padding-right: 100px; padding-bottom: 100px;">
-        <div class="card" style="width: 18rem; float: right;">
-          <div class="card-body">
-			<h4>Note</h4>
-            <p>1 UP System only <br>
-              2 4yrs, ADMU only <br>
-              3 DLSU-Manila only <br>
-              4 4yrs, USC only <br>
-              5 3yrs, DLSU-Manila only <br>
-              6 4 yrs, UPM only <br>
-			</p>
+        <section id="cardSection" style="padding-right: 100px; padding-bottom: 100px;">
+          <div class="card" style="width: 18rem; float: right;">
+            <div class="card-body">
+			        <h4>Note</h4>
+                <p>1 UP System only <br>
+                  2 4yrs, ADMU only <br>
+                  3 DLSU-Manila only <br>
+                  4 4yrs, USC only <br>
+                  5 3yrs, DLSU-Manila only <br>
+                  6 4 yrs, UPM only <br>
+			          </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       
-      <h4>
-        Study Placements
-      </h4>
-      <p>University of the Philippines</p>
-      <p>State Universities and Colleges</p>
-      <p>Private Institutions that are recognized by CHED as Centers of Excellence or Centers of Development or has FAAP Level III accreditation for the priority S&T programs of study</p>
-    </div>
+        <h4>
+          Study Placements
+        </h4>
+        <p>University of the Philippines</p>
+        <p>State Universities and Colleges</p>
+        <p>Private Institutions that are recognized by CHED as Centers of Excellence or Centers of Development or has FAAP Level III accreditation for the priority S&T programs of study</p>
+      </div>
     <!-- end of programs -->
     
-    <div id="schopriv" class="tabcontent">
-      <h3>Scholarship Privileges</h3>
-      <p>
+      <div id="schopriv" class="tabcontent">
+        <h3>
+          Scholarship Privileges
+        </h3>
+        <p>
         <table>
           <tr>
             <th>A. Regular Academic Year</th>
@@ -808,7 +812,7 @@ if (!isset($_SESSION['loggedin'])) {
 
         // Get the element with id="defaultOpen" and click on it
         document.getElementById("default").click();
-	  </script>
+	    </script>
     </div>
 	</body>
 </html>
